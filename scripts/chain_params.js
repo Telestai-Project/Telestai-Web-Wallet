@@ -26,26 +26,23 @@ export const cChainParams = reactive({
         collateralInSats: 10000 * COIN,
         isTestnet: false,
         TICKER: 'TLS',
-        PUBKEY_PREFIX: ['A'],
-        STAKING_PREFIX: 'A',
-        PUBKEY_ADDRESS: 23,
-        STAKING_ADDRESS: 23,
+        PUBKEY_PREFIX: ['T'],
+        STAKING_PREFIX: 'T',
+        PUBKEY_ADDRESS: 66,
+        STAKING_ADDRESS: 66,
         SECRET_KEY: 128,
-        BIP44_TYPE: 2686,
+        BIP44_TYPE: 10117,
         BIP44_TYPE_LEDGER: 77,
         PROTOCOL_VERSION: 70926,
-        MASTERNODE_PORT: 8865,
+        MASTERNODE_PORT: 8767,
         // A list of Labs-trusted explorers
         Explorers: [
             // Display name      Blockbook-compatible API base
-            { name: 'TLS BlockBook', url: 'https://blockbook.aipowergrid.io' },
+            { name: 'TLS BlockBook', url: 'https://blockbook.telestai.io' },
         ],
         Nodes: [
-	    { name: 'TLS US', url: 'https://us-seed1.aipowergrid.io' },
-	    { name: 'TLS Japan', url: 'https://jp-seed2.aipowergrid.io' },
-	    { name: 'TLS Australia', url: 'https://au-seed3.aipowergrid.io' },
-	    { name: 'TLS Europe', url: 'https://eu-seed4.aipowergrid.io' },
-	    { name: 'TLS India', url: 'https://in-seed4.aipowergrid.io' },
+	    { name: 'TLS 1', url: 'https://dnsseed.telestainodes.xyz' },
+	    { name: 'TLS 2', url: 'https://telestai.seeds.multicoin.co' },
 	],
         Consensus: {
             // Network upgrades
@@ -57,30 +54,30 @@ export const cChainParams = reactive({
         proposalFeeConfirmRequirement: 6,
         maxPaymentCycles: 6,
         maxPayment: 10 * 43200 * COIN, // 43200 blocks of 10 TLS
-        defaultColdStakingAddress: 'AdgQDpS8jDRJDX8yK8m9KnTMarsE84zdsy', // Labs Cold Pool
+        defaultColdStakingAddress: 'TdgQDpS8jDRJDX8yK8m9KnTMarsE84zdsy', // Labs Cold Pool
     },
     testnet: {
         name: 'testnet',
         collateralInSats: 10000 * COIN,
         isTestnet: true,
         TICKER: 'tTLS',
-        PUBKEY_PREFIX: ['a', 'a'],
-        STAKING_PREFIX: 'a',
-        PUBKEY_ADDRESS: 23,
-        STAKING_ADDRESS: 23,
+        PUBKEY_PREFIX: ['t', 't'],
+        STAKING_PREFIX: 't',
+        PUBKEY_ADDRESS: 111,
+        STAKING_ADDRESS: 111,
         SECRET_KEY: 239,
         BIP44_TYPE: 1,
         BIP44_TYPE_LEDGER: 1,
         PROTOCOL_VERSION: 70926,
-        MASTERNODE_PORT: 18865,
+        MASTERNODE_PORT: 18770,
         // A list of Labs-trusted explorers
         Explorers: [
             // Display name      Blockbook-compatible API base
-            { name: 'TLS Blockbook', url: 'https://blockbook.aipowergrid.io' },
+            { name: 'TLS Blockbook', url: 'https://blockbook.telestai.io' },
         ],
         Nodes: [
-	    { name: 'TLS TestNode1', url: 'seed1-testnet.aipowergrid.io' },
-	    { name: 'TLS TestNode2', url: 'seed2-testnet.aipowergrid.io' },
+	    { name: 'TLS TestNode1', url: 'seed1-testnet.telestai.io' },
+	    { name: 'TLS TestNode2', url: 'seed2-testnet.telestai.io' },
 	],
         Consensus: {
             // Network upgrades
@@ -92,7 +89,7 @@ export const cChainParams = reactive({
         proposalFeeConfirmRequirement: 3,
         maxPaymentCycles: 20,
         maxPayment: 10 * 144 * COIN, // 144 blocks of 10 tTLS
-        defaultColdStakingAddress: 'amNziUEPyhnUkiVdfsiNX93H6rSJnios44', // Sparrow's Testnet Cold Pool
+        defaultColdStakingAddress: 'tmNziUEPyhnUkiVdfsiNX93H6rSJnios44', // Sparrow's Testnet Cold Pool
     },
 });
 // Set default chain
