@@ -4,5 +4,4 @@ locale/lang-tools/env
 __pycache__
 coverage/
 coverage.data
-
-dist/
+package-lock.json
