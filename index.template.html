@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <!-- Primary Meta Tags -->
-    <title>My AIPG Wallet</title>
-    <meta name="title" content="My AIPG Wallet" />
-    <meta name="description" content="The wallet of the future - Receive, Send, Stake and Exchange using a completely decentralized, open-source, battle-hardened AIPG wallet." />
-    <meta name="keywords" content="web,wallet,webwallet,crypto,cryptocurrency,opensource,oss,aipg,staking,masternodes,exchange,swap,decentralized" />
+    <title>My Telestai Wallet</title>
+    <meta name="title" content="My Telestai Wallet" />
+    <meta name="description" content="The wallet of the future - Receive, Send, Stake and Exchange using a completely decentralized, open-source, battle-hardened Telestai wallet." />
+    <meta name="keywords" content="web,wallet,webwallet,crypto,cryptocurrency,opensource,oss,tls,staking,masternodes,exchange,swap,decentralized" />
 
     <link rel="manifest" href="manifest.json"/>
     <meta name="mobile-web-app-capable" content="yes" />
@@ -17,16 +17,16 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_GB" />
-    <meta property="og:url" content="https://aipowergrid.io/" />
-    <meta property="og:title" content="My AIPG Wallet" />
-    <meta property="og:description" content="The wallet of the future - Receive, Send, Stake and Exchange using a completely decentralized, open-source, battle-hardened AIPG wallet." />
+    <meta property="og:url" content="https://www.telestai.io/" />
+    <meta property="og:title" content="My Telestai Wallet" />
+    <meta property="og:description" content="The wallet of the future - Receive, Send, Stake and Exchange using a completely decentralized, open-source, battle-hardened Telestai wallet." />
     <meta property="og:image" content="/logo_opaque-dark-bg.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://twitter.com/AIPowerGrid" />
-    <meta property="twitter:title" content="My AIPG Wallet" />
-    <meta property="twitter:description" content="The wallet of the future - Receive, Send, Stake and Exchange using a completely decentralized, open-source, battle-hardened AIPG wallet." />
+    <meta property="twitter:url" content="https://twitter.com/Telestai_io" />
+    <meta property="twitter:title" content="My Telestai Wallet" />
+    <meta property="twitter:description" content="The wallet of the future - Receive, Send, Stake and Exchange using a completely decentralized, open-source, battle-hardened Telestai wallet." />
     <meta property="twitter:image" content="/logo_opaque-dark-bg.png" />
 
     <!-- Colour Theme -->
@@ -34,7 +34,7 @@
     <meta name="theme-color" content="#d3d3d3" />
 
     <link rel="icon" type="image/png" href="/logo_opaque-dark-bg.png" />
-    <link rel="canonical" href="https://wallet.aipowergrid.io/" />
+    <link rel="canonical" href="https://webwallet.telestai.io/" />
   </head>
 
   <body>
@@ -43,7 +43,7 @@
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg sticky-top navbar-dark navbarSpecial">
           <div class="container">
-            <img onclick="MPW.openTab(event, 'keypair')" style="cursor: pointer;" class="nav-logo navbar-brand noselect" alt="AIPG" id="mpw-main-logo" />
+            <img onclick="MPW.openTab(event, 'keypair')" style="cursor: pointer;" class="nav-logo navbar-brand noselect" alt="TLS" id="mpw-main-logo" />
             <button id="navbarToggler" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -142,8 +142,8 @@
                 <!-- JS populated modal content -->
               </div>
               <div class="modal-footer" hidden="true" id="confirmModalButtons">
-                <button data-i18n="popupConfirm" type="button" id="confirmModalConfirmButton" class="aipg-button-big" style="float: right;">Confirm</button>
-                <button type="button" id="confirmModalCancelButton" class="aipg-button-big" style="float: right; opacity: 0.7;">Cancel</button>
+                <button data-i18n="popupConfirm" type="button" id="confirmModalConfirmButton" class="tls-button-big" style="float: right;">Confirm</button>
+                <button type="button" id="confirmModalCancelButton" class="tls-button-big" style="float: right; opacity: 0.7;">Cancel</button>
               </div>
             </div>
           </div>
@@ -170,7 +170,7 @@
                 </div>
               </div>
               <div class="modal-footer text-right">
-                <button class="aipg-button-small" onclick="MPW.guiEncryptWallet()">
+                <button class="tls-button-small" onclick="MPW.guiEncryptWallet()">
                   <span class="dcWallet-svgIconPurple">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                       <path
@@ -189,14 +189,14 @@
           <div class="row no-gutters">
             <div class="col-md-12 rm-pd">
               <div class="tabcontent" style="display: block;">
-                <!-- AIPG TITLE SECTION -->
+                <!-- TLS TITLE SECTION -->
                 <div class="col-md-12 title-section float-left rm-pd">
-                  <h1 class="aipg-bold-title center-text">
-                    <span data-i18n="loadingTitle">My AIPG Wallet is</span>
+                  <h1 class="tls-bold-title center-text">
+                    <span data-i18n="loadingTitle">My Telestai Wallet is</span>
                     <div data-i18n="loading">Loading</div>
                   </h1>
                 </div>
-                <!-- // AIPG TITLE SECTION -->
+                <!-- // TLS TITLE SECTION -->
               </div>
 
 	      <div id="DashboardTab"> </div>
@@ -222,7 +222,7 @@
                         </div>
 
                         <span data-i18n="staking">Staking</span><br>
-                        <span class="dcWallet-aipgBalance" id="guiBalanceStaking">0</span> <span id="guiBalanceStakingTicker" class="dcWallet-aipgTicker">AIPG</span><br />
+                        <span class="dcWallet-tlsBalance" id="guiBalanceStaking">0</span> <span id="guiBalanceStakingTicker" class="dcWallet-tlsTicker">TLS</span><br />
                         <div class="dcWallet-usdBalance">
                           <span id="guiStakingValue" class="dcWallet-usdValue">$-</span>
                           <span id="guiStakingValueCurrency" class="dcWallet-usdValue">USD</span>
@@ -269,7 +269,7 @@
                                 MAX
                               </div>
                             </span>
-                            <span id="unstakeAmountCoinsTicker" class="input-group-text">AIPG</span>
+                            <span id="unstakeAmountCoinsTicker" class="input-group-text">TLS</span>
                           </div>
                         </div>
                       </div>
@@ -285,7 +285,7 @@
                     </div>
 
                     <div class="text-right pb-2">
-                      <button class="aipg-button-medium w-100" style="margin:0px;" onclick="MPW.undelegateGUI()">
+                      <button class="tls-button-medium w-100" style="margin:0px;" onclick="MPW.undelegateGUI()">
                         <span class="buttoni-icon"><i class="fas fa-paper-plane fa-tiny-margin"></i></span>
                         <span data-i18n="stakeUnstake" class="buttoni-text">Unstake</span>
                       </button>
@@ -313,7 +313,7 @@
                                 MAX
                               </div>
                             </span>
-                            <span id="stakeAmountCoinsTicker" class="input-group-text">AIPG</span>
+                            <span id="stakeAmountCoinsTicker" class="input-group-text">TLS</span>
                           </div>
                         </div>
                       </div>
@@ -340,7 +340,7 @@
                     </div>
 
                     <div class="text-right pb-2">
-                      <button class="aipg-button-medium w-100" style="margin:0px;" onclick="MPW.delegateGUI()">
+                      <button class="tls-button-medium w-100" style="margin:0px;" onclick="MPW.delegateGUI()">
                         <span class="buttoni-icon"><i class="fas fa-paper-plane fa-tiny-margin"></i></span>
                         <span data-i18n="stake" class="buttoni-text">Stake</span>
                       </button>
@@ -350,7 +350,7 @@
               </div>
               <div id="Governance" class="tabcontent">
                 <div class="col-md-12 title-section float-left rm-pd">
-                  <h3 data-i18n="navGovernance" class="aipg-bold-title center-text">Governance</h3>
+                  <h3 data-i18n="navGovernance" class="tls-bold-title center-text">Governance</h3>
                   <p data-i18n="govSubtext" class="center-text">From this tab you can check the proposals and, if you have a masternode, be a part of the <b>DAO</b> and vote!</p>
                 </div>
 
@@ -360,7 +360,7 @@
                     <span data-i18n="govMonthlyBudget" style="font-weight:800; color:#cac9d2;">Monthly Budget</span>
 
                     <div style="background-color:hsl(0, 0%, 37%); margin-top:11px; border-radius: 9px; width: fit-content; padding-left: 13px; padding-right: 13px; padding-bottom: 10px; padding-top: 9px;">
-                      <span style="font-size: 23px;"><span id="totalGovernanceBudget">-</span> <span style="color:#1a1a1a;">AIPG</span></span>
+                      <span style="font-size: 23px;"><span id="totalGovernanceBudget">-</span> <span style="color:#1a1a1a;">TLS</span></span>
                       <hr style="background-color:#ffffff33; margin-top:2px; margin-bottom:2px;">
                       <span style="font-size: 16px;"><span id="totalGovernanceBudgetValue">-</span></span>
                     </div>
@@ -369,7 +369,7 @@
                     <span data-i18n="govAllocBudget" style="font-weight:800; color:#cac9d2;">Budget Allocated</span>
 
                     <div style="background-color:hsl(0, 0%, 33%); margin-top:11px; border-radius: 9px; width: fit-content; padding-left: 13px; padding-right: 13px; padding-bottom: 10px; padding-top: 9px;">
-                      <span style="font-size: 23px;"><span id="allocatedGovernanceBudget">-</span> <span style="color:#1a1a1a;">AIPG</span></span>
+                      <span style="font-size: 23px;"><span id="allocatedGovernanceBudget">-</span> <span style="color:#1a1a1a;">TLS</span></span>
                       <hr style="background-color:#ffffff33; margin-top:2px; margin-bottom:2px;">
                       <span style="font-size: 16px;"><span id="allocatedGovernanceBudgetValue">-</span>
                     </div>
@@ -382,7 +382,7 @@
                     <span data-i18n="govAllocBudget" style="font-weight:800; color:#cac9d2;">Budget Allocated</span>
 
                     <div style="background-color:hsl(0, 0%, 32%); margin-top:11px; border-radius: 9px; width: fit-content; padding-left: 13px; padding-right: 13px; padding-bottom: 10px; padding-top: 9px;">
-                      <span style="font-size: 23px;"><span id="allocatedGovernanceBudget2">-</span> <span style="color:#1d1d1d;">AIPG</span></span>
+                      <span style="font-size: 23px;"><span id="allocatedGovernanceBudget2">-</span> <span style="color:#1d1d1d;">TLS</span></span>
                       <hr style="background-color:#ffffff33; margin-top:2px; margin-bottom:2px;">
                       <span style="font-size: 16px;"><span id="allocatedGovernanceBudgetValue2">-</span>
                     </div>
@@ -390,7 +390,7 @@
                 </div>
 
 
-                <div class="aipg-button-small governAdd" onclick="MPW.createProposal()"><i class="fas fa-plus"></i></div>
+                <div class="tls-button-small governAdd" onclick="MPW.createProposal()"><i class="fas fa-plus"></i></div>
                 <table id="proposalsTable" class="table table-hover table-dark bg-transparent governTable" style="width: 100%;">
                   <thead>
                     <td class="text-center btlr-7p"><b data-i18n="govTableStatus"> STATUS </b></td>
@@ -419,7 +419,7 @@
               </div>
               <div id="Masternode" class="tabcontent">
                 <div class="col-md-12 title-section float-left rm-pd center-text">
-                  <h3><span data-i18n="mnControlYour" style="font-weight: 300;">Control your</span></h3><h3 data-i18n="navMasternode" class="aipg-bold-title"> Masternode</h3>
+                  <h3><span data-i18n="mnControlYour" style="font-weight: 300;">Control your</span></h3><h3 data-i18n="navMasternode" class="tls-bold-title"> Masternode</h3>
                   <p data-i18n="mnSubtext">From this tab you can create and access one or more masternodes</p>
                 </div>
 
@@ -438,7 +438,7 @@
                       <input type="password" id="mnPrivateKey" placeholder="Masternode Private Key" />
                       <input type="text" id="mnIP" placeholder="Masternode ip address" />
                       <select id="mnTxId" style="display: block;" placeholder="Masternode collateral tx" class="form-control"> </select>
-                      <button class="aipg-button-big" onclick="MPW.importMasternode()">
+                      <button class="tls-button-big" onclick="MPW.importMasternode()">
                         <span class="buttoni-icon"><i class="fas fa-file-upload fa-tiny-margin"></i></span>
                         <span class="buttoni-text" id="importMnText">Access Masternode</span>
                         <span class="buttoni-arrow">
@@ -455,7 +455,7 @@
 
                 <div id="createMasternode" class="dashboard-item" style="display: none; width: 100%;">
                   <div class="container">
-                    <h4>Create a masternode <small style="opacity: 0.75;">(10k AIPG)</small></h4>
+                    <h4>Create a masternode <small style="opacity: 0.75;">(10k TLS)</small></h4>
                     <input class="hide-element" type="text" />
                     <div style="display: block;">
                       <p>Choose your Masternode type</p>
@@ -465,7 +465,7 @@
                       </select>
                       <br />
                       <br />
-                      <button class="aipg-button-big" onclick="MPW.createMasternode()">
+                      <button class="tls-button-big" onclick="MPW.createMasternode()">
                         <span class="buttoni-icon"><i class="fas fa-file-upload fa-tiny-margin"></i></span>
                         <span class="buttoni-text" id="importMnText">Create Masternode</span>
                         <span class="buttoni-arrow">
@@ -503,12 +503,12 @@
                 <br />
 
                 <center id="controlMasternode" style="display: none; width: 100%;">
-                  <button class="aipg-button-big" onclick="MPW.destroyMasternode()" style="margin: 20px; font-weight: 550 !important;">
+                  <button class="tls-button-big" onclick="MPW.destroyMasternode()" style="margin: 20px; font-weight: 550 !important;">
                     <span class="buttoni-icon"><i class="fas fa-burn fa-tiny-margin"></i></span>
                     <span class="buttoni-text" id="importMnText">Destroy Masternode</span>
                   </button>
 
-                  <button class="aipg-button-big" onclick="MPW.startMasternode(true)" style="margin: 20px; font-weight: 550 !important;">
+                  <button class="tls-button-big" onclick="MPW.startMasternode(true)" style="margin: 20px; font-weight: 550 !important;">
                     <span class="buttoni-icon"><i class="fas fa-redo-alt fa-tiny-margin"></i></span>
                     <span class="buttoni-text" id="importMnText">Restart Masternode</span>
                   </button>
@@ -537,7 +537,7 @@
 
                       <br />
 
-                      <label for="node" data-i18n="settingsAIPGNode">Choose an AIPG node:</label>
+                      <label for="node" data-i18n="settingsTLSNode">Choose an TLS node:</label>
                       <br />
                       <select id="node" class="form-control" name="node">
                         <!-- Populated via JS at DOM load (settings.js) -->
@@ -636,11 +636,10 @@
       <footer id="foot">
         <div class="footer">
           <div>
-            <span> © MIT 2024 </span> - <span>Built by AI Power Grid</span><br />
-            <a href="https://twitter.com/AIPowerGrid" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a> - 
-            <a href="https://github.com/AIPowerGrid/AIPG-Web-Wallet" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a> - 
-            <a href="https://discord.gg/vZ9XrTSRYr" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i></a> - 
-            <a href="https://medium.com/aipg-guides" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-medium"></i></a> - 
+            <span> © MIT 2024 </span> - <span>Built by Telestai and AIPG Developers</span><br />
+            <a href="https://twitter.com/Telestai_io" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a> - 
+            <a href="https://github.com/Telestai-Project/Telestai-Web-Wallet" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a> - 
+            <a href="https://discord.com/invite/VmFXfHnZE5" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i></a> - 
             <span id="version" class="ptr" onclick="MPW.renderChangelog();"></span>
           </div>
         </div>
