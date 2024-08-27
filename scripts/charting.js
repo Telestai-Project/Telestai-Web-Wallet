@@ -98,7 +98,7 @@ async function getWalletDataset() {
  * Create the initial Wallet Breakdown chart configuration and UI rendering
  */
 export async function generateWalletBreakdown(arrBreakdown) {
-    // Render the AIPG logo in the centre of the "Wallet Doughnut"
+    // Render the TLS logo in the centre of the "Wallet Doughnut"
     const image = new Image();
     const svg = (await import('../assets/logo-circle.svg')).default;
     const url = URL.createObjectURL(new Blob([svg], { type: 'image/svg+xml' }));

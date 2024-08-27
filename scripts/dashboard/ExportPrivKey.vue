@@ -50,7 +50,7 @@ function close() {
             <template #footer>
                 <center>
                     <button
-                        class="aipg-button-big"
+                        class="tls-button-big"
                         @click="blur = !blur"
                         data-testid="blurBtn"
                     >

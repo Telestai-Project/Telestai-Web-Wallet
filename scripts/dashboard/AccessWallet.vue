@@ -71,7 +71,7 @@ function importWallet() {
                 <div class="coinstat-icon" v-html="coinPlant"></div>
 
                 <div class="col-md-12 dashboard-title">
-                    <h3 class="aipg-bold-title-smaller">
+                    <h3 class="tls-bold-title-smaller">
                         <span>{{ translation.dCardFourTitle }}</span>
                         <div>{{ translation.dCardFourSubTitle }}</div>
                     </h3>
@@ -97,7 +97,7 @@ function importWallet() {
                         data-testid="passwordInp"
                     />
                     <button
-                        class="aipg-button-big"
+                        class="tls-button-big"
                         @click="importWallet()"
                         data-testid="importWalletButton"
                     >
@@ -123,7 +123,7 @@ function importWallet() {
 
                 <button
                     v-show="!showInput"
-                    class="aipg-button-big"
+                    class="tls-button-big"
                     @click="showInput = true"
                     data-testid="accWalletButton"
                 >

@@ -266,7 +266,7 @@ async function lockWallet() {
 /**
  * Sends a transaction
  * @param {string} address - Address or contact to send to
- * @param {number} amount - Amount of AIPGs to send
+ * @param {number} amount - Amount of TLS to send
  */
 async function send(address, amount) {
     // Ensure a wallet is unlocked
@@ -542,7 +542,7 @@ defineExpose({
             </div>
             <!-- // Lock Wallet -->
 
-            <!-- Redeem Code (AIPG Promos) -->
+            <!-- Redeem Code (TLS Promos) -->
             <div
                 class="modal"
                 id="redeemCodeModal"
@@ -573,11 +573,11 @@ defineExpose({
                         <div class="modal-body center-text">
                             <center>
                                 <p class="mono" style="font-size: small">
-                                    <b>AIPG Promos</b>
+                                    <b>TLS Promos</b>
                                     <span
                                         style="font-family: inherit !important"
                                     >
-                                        {{ translation.aipgPromos }}
+                                        {{ translation.tlsPromos }}
                                     </span>
                                 </p>
                                 <div id="redeemCodeModeBox">
@@ -585,7 +585,7 @@ defineExpose({
                                         type="button"
                                         onclick="MPW.setPromoMode(true)"
                                         id="redeemCodeModeRedeem"
-                                        class="aipg-button-big"
+                                        class="tls-button-big"
                                         style="
                                             margin: 0;
                                             border-top-right-radius: 0;
@@ -599,7 +599,7 @@ defineExpose({
                                         type="button"
                                         onclick="MPW.setPromoMode(false)"
                                         id="redeemCodeModeCreate"
-                                        class="aipg-button-big"
+                                        class="tls-button-big"
                                         style="
                                             margin: 0;
                                             border-top-left-radius: 0;
@@ -791,7 +791,7 @@ defineExpose({
                                 type="button"
                                 onclick="MPW.promoConfirm()"
                                 id="redeemCodeModalConfirmButton"
-                                class="aipg-button-big"
+                                class="tls-button-big"
                                 style="float: right"
                             >
                                 Redeem
@@ -800,7 +800,7 @@ defineExpose({
                                 type="button"
                                 data-dismiss="modal"
                                 aria-label="Close"
-                                class="aipg-button-big"
+                                class="tls-button-big"
                                 style="float: right; opacity: 0.7"
                             >
                                 {{ translation.popupClose }}
@@ -809,7 +809,7 @@ defineExpose({
                     </div>
                 </div>
             </div>
-            <!-- // Redeem Code (AIPG Promos) -->
+            <!-- // Redeem Code (TLS Promos) -->
 
             <!-- Contacts Modal -->
             <div
@@ -847,7 +847,7 @@ defineExpose({
                                 type="button"
                                 data-dismiss="modal"
                                 aria-label="Close"
-                                class="aipg-button-big"
+                                class="tls-button-big"
                                 data-i18n="popupClose"
                                 style="color: #fff; float: right; opacity: 0.8"
                             >
@@ -874,7 +874,7 @@ defineExpose({
                     :isEncrypt="wallet.isEncrypted.value"
                 />
                 <div class="row p-0">
-                    <!-- Balance in AIPG & USD-->
+                    <!-- Balance in TLS & USD-->
                     <WalletBalance
                         :balance="balance"
                         :immatureBalance="immatureBalance"

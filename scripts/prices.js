@@ -3,7 +3,7 @@ import { isEmpty } from './misc.js';
 import { cMarket, fillCurrencySelect } from './settings.js';
 
 /**
- * CoinGecko's endpoint for AIPG data, optimised for least bandwidth
+ * CoinGecko's endpoint for TLS data, optimised for least bandwidth
  * - No localisation, tickers, community data, developer data or sparklines
  */
 export const COINGECKO_ENDPOINT =

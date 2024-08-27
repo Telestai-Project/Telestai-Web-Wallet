@@ -16,7 +16,7 @@ If any errors are found, the PR works unexpectedly, or you have viable suggestio
 ---
 
 <!---
-Below is for LMP (Labs Micro Proposals), how your PR is rewarded AIPG: this'll help your PR be rewarded faster by the DAO!
+Below is for LMP (Labs Micro Proposals), how your PR is rewarded TLS: this'll help your PR be rewarded faster by the DAO!
 --->
 
 ## What does this PR address?

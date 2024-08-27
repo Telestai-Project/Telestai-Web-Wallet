@@ -44,7 +44,7 @@ async function generateWallet() {
         <div class="h-100 dashboard-item dashboard-display">
             <div class="coinstat-icon" v-html="phone"></div>
             <div class="col-md-12 dashboard-title">
-                <h3 class="aipg-bold-title-smaller">
+                <h3 class="tls-bold-title-smaller">
                     <span> {{ translation.dCardOneTitle }} </span>
                     <div>{{ translation.dCardOneSubTitle }}</div>
                 </h3>
@@ -54,7 +54,7 @@ async function generateWallet() {
             </div>
 
             <button
-                class="aipg-button-big"
+                class="tls-button-big"
                 @click="generateWallet()"
                 data-testid="generateWallet"
             >
@@ -111,7 +111,7 @@ async function generateWallet() {
                 <center>
                     <button
                         type="button"
-                        class="aipg-button-big"
+                        class="tls-button-big"
                         @click="showModal = false"
                         data-testid="seedphraseModal"
                     >

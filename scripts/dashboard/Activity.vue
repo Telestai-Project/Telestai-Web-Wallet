@@ -347,7 +347,7 @@ defineExpose({ update, reset, getTxCount });
                 <center>
                     <button
                         v-if="!isHistorySynced"
-                        class="aipg-button-medium"
+                        class="tls-button-medium"
                         @click="update(10)"
                     >
                         <span class="buttoni-icon"

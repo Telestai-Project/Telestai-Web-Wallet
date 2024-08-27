@@ -395,7 +395,7 @@ export async function guiRenderReceiveModal(
     } else if (cReceiveType === RECEIVE_TYPES.ADDRESS) {
         // Get our current wallet address
         const strAddress = await wallet.getCurrentAddress();
-        createQR('aipg:' + strAddress, doms.domModalQR);
+        createQR('tls:' + strAddress, doms.domModalQR);
         doms.domModalQrLabel.innerHTML =
             strAddress +
             `<i onclick="MPW.toClipboard('${strAddress}', this)" id="guiAddressCopy" class="fas fa-clipboard" style="cursor: pointer; width: 20px;"></i>`;

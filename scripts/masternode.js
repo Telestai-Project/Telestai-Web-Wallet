@@ -461,7 +461,7 @@ export default class Masternode {
      * @param {String} options.url - Url of the proposal
      * @param {Number} options.nPayments - Number of cycles this proposal is gonna last
      * @param {Number} options.start - Superblock of when the proposal is going to start
-     * @param {String} options.address - Base58 encoded AIPG address
+     * @param {String} options.address - Base58 encoded TLS address
      * @param {Number} options.monthlyPayment - Payment amount per cycle in satoshi
      * @returns {String} hex hash of the proposal
      */
@@ -505,7 +505,7 @@ export default class Masternode {
      * @param {String} options.url - Url of the proposal
      * @param {Number} options.nPayments - Number of cycles this proposal is gonna last
      * @param {Number} options.start - Superblock of when the proposal is going to start
-     * @param {String} options.address - Base58 encoded AIPG address
+     * @param {String} options.address - Base58 encoded TLS address
      * @param {Number} options.monthlyPayment - Payment amount per cycle in satoshi
      * @param {String} options.txid - Transaction id of the proposal fee
      * @returns {Promise<{ ok: boolean, err: string | undefined, hash: string | undefined }>} The Vote Hash, if the finalization happened without errors
@@ -571,7 +571,7 @@ export default class Masternode {
      * @param {String} options.url - Url of the proposal
      * @param {Number} options.nPayments - Number of cycles this proposal is gonna last
      * @param {Number} options.start - Superblock of when the proposal is going to start
-     * @param {String} options.address - Base58 encoded AIPG address
+     * @param {String} options.address - Base58 encoded TLS address
      * @param {Number} options.monthlyPayment - Payment amount per cycle in satoshi
      * @returns {boolean} If the proposal is valid
      */

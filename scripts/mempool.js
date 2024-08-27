@@ -292,7 +292,7 @@ export class Mempool {
      * Get a list of UTXOs
      * @param {Object} o
      * @param {Number} o.filter enum element of UTXO_WALLET_STATE
-     * @param {Number | null} o.target AIPGs in satoshi that we want to spend
+     * @param {Number | null} o.target TLS in satoshi that we want to spend
      * @param {Boolean} o.onlyConfirmed Consider only confirmed transactions
      * @param {Boolean} o.includeLocked Include locked coins
      * @returns {CTxOut[]} Array of fetched UTXOs
@@ -319,7 +319,7 @@ export class Mempool {
                     continue;
                 }
                 utxos.push(vout);
-                // Return early if you found enough AIPGs (11/10 is to make sure to pay fee)
+                // Return early if you found enough TLS (11/10 is to make sure to pay fee)
                 totFound += vout.value;
                 if (target && totFound > (11 / 10) * target) {
                     return utxos;

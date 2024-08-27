@@ -125,7 +125,7 @@ export class Database {
             console.error('---- end of account dump ----');
             createAlert(
                 'warning',
-                '<b>Account Creation Error</b><br>Logs were dumped in your Browser Console<br>Please submit these privately to AIPG Labs Developers!'
+                '<b>Account Creation Error</b><br>Logs were dumped in your Browser Console<br>Please submit these privately to TLS Labs Developers!'
             );
             throw new Error(
                 'addAccount was called with with an invalid account'
@@ -190,7 +190,7 @@ export class Database {
             console.error('---- end of account dump ----');
             createAlert(
                 'warning',
-                '<b>DB Update Error</b><br>Your wallet is safe, logs were dumped in your Browser Console<br>Please submit these privately to AIPG Labs Developers!'
+                '<b>DB Update Error</b><br>Your wallet is safe, logs were dumped in your Browser Console<br>Please submit these privately to TLS Labs Developers!'
             );
             throw new Error(
                 'addAccount was called with with an invalid account'
@@ -210,7 +210,7 @@ export class Database {
             console.error('---- end of input dump ----');
             createAlert(
                 'warning',
-                '<b>DB Update Error</b><br>Logs were dumped in your Browser Console<br>Please submit these privately to AIPG Labs Developers!'
+                '<b>DB Update Error</b><br>Logs were dumped in your Browser Console<br>Please submit these privately to TLS Labs Developers!'
             );
             throw new Error(
                 "updateAccount was called, but the account doesn't exist"
@@ -470,7 +470,7 @@ export class Database {
                     migrate = true;
                 }
 
-                // The introduction of AIPGPromos (safely added during <v2 upgrades)
+                // The introduction of TLSPromos (safely added during <v2 upgrades)
                 if (oldVersion <= 1) {
                     db.createObjectStore('promos');
                 }

@@ -269,13 +269,13 @@ export function isXPub(strXPub) {
  * @returns {object | false}
  */
 export function parseBIP21Request(strReq) {
-    // Format should match: aipg:addr[?amount=x&label=x]
+    // Format should match: tls:addr[?amount=x&label=x]
     if (!strReq.includes(BIP21_PREFIX + ':')) return false;
 
     const [addressPart, optionsPart] = strReq.includes('?')
         ? strReq.split('?')
         : [strReq, false];
-    const strAddress = addressPart.substring(BIP21_PREFIX.length + 1); // remove 'aipg:' prefix
+    const strAddress = addressPart.substring(BIP21_PREFIX.length + 1); // remove 'tls:' prefix
     let cOptions = {};
 
     // Ensure the address is valid

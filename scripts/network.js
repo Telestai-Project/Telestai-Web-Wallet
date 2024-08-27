@@ -15,10 +15,10 @@ import { mempool, stakingDashboard } from './global.js';
 /**
  * @typedef {Object} XPUBAddress
  * @property {string} type - Type of address (always 'XPUBAddress' for XPUBInfo classes)
- * @property {string} name - AIPG address string
+ * @property {string} name - TLS address string
  * @property {string} path - BIP44 path of the address derivation
  * @property {number} transfers - Number of transfers involving the address
- * @property {number} decimals - Decimal places in the amounts (AIPG has 8 decimals)
+ * @property {number} decimals - Decimal places in the amounts (TLS has 8 decimals)
  * @property {string} balance - Current balance of the address (satoshi)
  * @property {string} totalReceived - Total ever received by the address (satoshi)
  * @property {string} totalSent - Total ever sent from the address (satoshi)
@@ -378,7 +378,7 @@ export class ExplorerNetwork extends Network {
         return await req.json();
     }
 
-    // AIPG Labs Analytics: if you are a user, you can disable this FULLY via the Settings.
+    // TLS Labs Analytics: if you are a user, you can disable this FULLY via the Settings.
     // ... if you're a developer, we ask you to keep these stats to enhance upstream development,
     // ... but you are free to completely strip MPW of any analytics, if you wish, no hard feelings.
     submitAnalytics(strType, cData = {}) {

@@ -27,7 +27,7 @@ export async function getHardwareWalletKeys(path, xpub = false, verify = true) {
                 await import('@ledgerhq/hw-transport-webusb')
             ).default;
             transport = await TransportWebUSB.create();
-            cHardwareWallet = new AppBtc({ transport, currency: 'AIPG' });
+            cHardwareWallet = new AppBtc({ transport, currency: 'TLS' });
         }
 
         // Update device info and fetch the pubkey
@@ -135,12 +135,12 @@ export async function getHardwareWalletKeys(path, xpub = false, verify = true) {
 // Ledger Hardware wallet constants
 export const LEDGER_ERRS = new Map([
     // Ledger error code <--> User-friendly string
-    [25870, 'Open the AIPG app on your device'],
-    [25873, 'Open the AIPG app on your device'],
-    [57408, 'Navigate to the AIPG app on your device'],
-    [27157, 'Wrong app! Open the AIPG app on your device'],
-    [27266, 'Wrong app! Open the AIPG app on your device'],
-    [27904, 'Wrong app! Open the AIPG app on your device'],
+    [25870, 'Open the TLS app on your device'],
+    [25873, 'Open the TLS app on your device'],
+    [57408, 'Navigate to the TLS app on your device'],
+    [27157, 'Wrong app! Open the TLS app on your device'],
+    [27266, 'Wrong app! Open the TLS app on your device'],
+    [27904, 'Wrong app! Open the TLS app on your device'],
     [27010, 'Unlock your Ledger, then try again!'],
     [27404, 'Unlock your Ledger, then try again!'],
 ]);

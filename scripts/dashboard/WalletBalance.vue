@@ -248,7 +248,7 @@ function reload() {
                 data-toggle="modal"
                 data-target="#walletBreakdownModal"
             >
-                <span class="dcWallet-aipgBalance" v-html="balanceStr"> </span>
+                <span class="dcWallet-tlsBalance" v-html="balanceStr"> </span>
                 <i
                     class="fa-solid fa-plus"
                     v-if="immatureBalance != 0"
@@ -260,7 +260,7 @@ function reload() {
                     v-html="immatureBalanceStr"
                 ></span>
                 <span
-                    class="dcWallet-aipgTicker"
+                    class="dcWallet-tlsTicker"
                     style="position: relative; left: 4px"
                     >&nbsp;{{ ticker }}&nbsp;</span
                 >

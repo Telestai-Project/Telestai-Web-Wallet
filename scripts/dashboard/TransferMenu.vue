@@ -13,7 +13,7 @@ const emit = defineEmits([
     'update:amount',
     'update:address',
 ]);
-// Amount of AIPGs to send in the selected currency (e.g. USD)
+// Amount of TLS to send in the selected currency (e.g. USD)
 const amountCurrency = ref('');
 const color = ref('');
 
@@ -174,7 +174,7 @@ async function selectContact() {
                                             {{ translation.sendAmountCoinsMax }}
                                         </div>
                                     </span>
-                                    <span class="input-group-text">AIPG</span>
+                                    <span class="input-group-text">TLS</span>
                                 </div>
                             </div>
                         </div>
@@ -232,7 +232,7 @@ async function selectContact() {
 
                     <div class="text-right pb-2">
                         <button
-                            class="aipg-button-medium w-100"
+                            class="tls-button-medium w-100"
                             style="margin: 0px"
                             @click="send()"
                             data-testid="sendButton"

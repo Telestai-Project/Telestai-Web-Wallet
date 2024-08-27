@@ -116,7 +116,7 @@ function generate() {
                 <div class="coinstat-icon" v-html="fire"></div>
 
                 <div class="col-md-12 dashboard-title">
-                    <h3 class="aipg-bold-title" style="font-size: 38px">
+                    <h3 class="tls-bold-title" style="font-size: 38px">
                         <span data-i18n="dCardTwoTitle">Create a new</span>
                         <div data-i18n="dCardTwoSubTitle">Vanity Wallet</div>
                     </h3>
@@ -148,7 +148,7 @@ function generate() {
                 </Transition>
 
                 <button
-                    class="aipg-button-big"
+                    class="tls-button-big"
                     @click="isGenerating ? stop() : generate()"
                     data-testid="generateBtn"
                 >

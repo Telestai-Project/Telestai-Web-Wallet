@@ -16,7 +16,7 @@ export const MAX_ACCOUNT_GAP = 20;
 export const MIN_PASS_LENGTH = 6;
 
 /** BIP21 coin prefix */
-export const BIP21_PREFIX = 'aipg';
+export const BIP21_PREFIX = 'tls';
 
 /* chainparams */
 export const cChainParams = reactive({
@@ -25,7 +25,7 @@ export const cChainParams = reactive({
         name: 'mainnet',
         collateralInSats: 10000 * COIN,
         isTestnet: false,
-        TICKER: 'AIPG',
+        TICKER: 'TLS',
         PUBKEY_PREFIX: ['A'],
         STAKING_PREFIX: 'A',
         PUBKEY_ADDRESS: 23,
@@ -38,14 +38,14 @@ export const cChainParams = reactive({
         // A list of Labs-trusted explorers
         Explorers: [
             // Display name      Blockbook-compatible API base
-            { name: 'AIPG BlockBook', url: 'https://blockbook.aipowergrid.io' },
+            { name: 'TLS BlockBook', url: 'https://blockbook.aipowergrid.io' },
         ],
         Nodes: [
-	    { name: 'AIPG US', url: 'https://us-seed1.aipowergrid.io' },
-	    { name: 'AIPG Japan', url: 'https://jp-seed2.aipowergrid.io' },
-	    { name: 'AIPG Australia', url: 'https://au-seed3.aipowergrid.io' },
-	    { name: 'AIPG Europe', url: 'https://eu-seed4.aipowergrid.io' },
-	    { name: 'AIPG India', url: 'https://in-seed4.aipowergrid.io' },
+	    { name: 'TLS US', url: 'https://us-seed1.aipowergrid.io' },
+	    { name: 'TLS Japan', url: 'https://jp-seed2.aipowergrid.io' },
+	    { name: 'TLS Australia', url: 'https://au-seed3.aipowergrid.io' },
+	    { name: 'TLS Europe', url: 'https://eu-seed4.aipowergrid.io' },
+	    { name: 'TLS India', url: 'https://in-seed4.aipowergrid.io' },
 	],
         Consensus: {
             // Network upgrades
@@ -56,14 +56,14 @@ export const cChainParams = reactive({
         proposalFee: 50 * COIN,
         proposalFeeConfirmRequirement: 6,
         maxPaymentCycles: 6,
-        maxPayment: 10 * 43200 * COIN, // 43200 blocks of 10 AIPG
+        maxPayment: 10 * 43200 * COIN, // 43200 blocks of 10 TLS
         defaultColdStakingAddress: 'AdgQDpS8jDRJDX8yK8m9KnTMarsE84zdsy', // Labs Cold Pool
     },
     testnet: {
         name: 'testnet',
         collateralInSats: 10000 * COIN,
         isTestnet: true,
-        TICKER: 'tAIPG',
+        TICKER: 'tTLS',
         PUBKEY_PREFIX: ['a', 'a'],
         STAKING_PREFIX: 'a',
         PUBKEY_ADDRESS: 23,
@@ -76,11 +76,11 @@ export const cChainParams = reactive({
         // A list of Labs-trusted explorers
         Explorers: [
             // Display name      Blockbook-compatible API base
-            { name: 'AIPG Blockbook', url: 'https://blockbook.aipowergrid.io' },
+            { name: 'TLS Blockbook', url: 'https://blockbook.aipowergrid.io' },
         ],
         Nodes: [
-	    { name: 'AIPG TestNode1', url: 'seed1-testnet.aipowergrid.io' },
-	    { name: 'AIPG TestNode2', url: 'seed2-testnet.aipowergrid.io' },
+	    { name: 'TLS TestNode1', url: 'seed1-testnet.aipowergrid.io' },
+	    { name: 'TLS TestNode2', url: 'seed2-testnet.aipowergrid.io' },
 	],
         Consensus: {
             // Network upgrades
@@ -91,7 +91,7 @@ export const cChainParams = reactive({
         proposalFee: 50 * COIN,
         proposalFeeConfirmRequirement: 3,
         maxPaymentCycles: 20,
-        maxPayment: 10 * 144 * COIN, // 144 blocks of 10 tAIPG
+        maxPayment: 10 * 144 * COIN, // 144 blocks of 10 tTLS
         defaultColdStakingAddress: 'amNziUEPyhnUkiVdfsiNX93H6rSJnios44', // Sparrow's Testnet Cold Pool
     },
 });

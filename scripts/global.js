@@ -315,7 +315,7 @@ export async function start() {
         // Refresh blockchain data
         refreshChainData();
 
-        // Fetch the AIPG prices
+        // Fetch the TLS prices
         refreshPriceDisplay();
     }, 15000);
 
@@ -1314,7 +1314,7 @@ async function renderProposals(arrProposals, fContested) {
             }
             const strLocalStatus = getProposalFinalisationStatus(cPropCache);
             const finalizeButton = document.createElement('button');
-            finalizeButton.className = 'aipg-button-small';
+            finalizeButton.className = 'tls-button-small';
             finalizeButton.innerHTML = '<i class="fas fa-check"></i>';
 
             if (
@@ -1498,13 +1498,13 @@ async function renderProposals(arrProposals, fContested) {
             domVoteBtns.style = 'vertical-align: middle;';
             voteBtn = '';
         } else {
-            let btnYesClass = 'aipg-button-small';
-            let btnNoClass = 'aipg-button-small';
+            let btnYesClass = 'tls-button-small';
+            let btnNoClass = 'tls-button-small';
             if (cProposal.YourVote) {
                 if (cProposal.YourVote === 1) {
-                    btnYesClass += ' aipg-button-big-yes-gov';
+                    btnYesClass += ' tls-button-big-yes-gov';
                 } else {
-                    btnNoClass += ' aipg-button-big-no-gov';
+                    btnNoClass += ' tls-button-big-no-gov';
                 }
             }
             const domVoteBtns = domRow.insertCell();
@@ -1886,7 +1886,7 @@ export async function createProposal() {
         }" style="text-align: center;"><br>
                <input id="proposalUrl" maxlength="64" placeholder="${
                    translation.popupExample
-               } https://forum.aipg.org/..." style="text-align: center;"><br>
+               } https://forum.tls.org/..." style="text-align: center;"><br>
                <input type="number" id="proposalCycles" min="1" max="${
                    cChainParams.current.maxPaymentCycles
                }" placeholder="${
