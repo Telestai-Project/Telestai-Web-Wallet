@@ -19,7 +19,7 @@ button {
 }
 
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(65, 91, 106);
     color: #f2f8fa;
 }
 
@@ -27,7 +27,7 @@ pre {
     display: block;
     font-size: 87.5%;
     color: inherit;
-    background-color: #00000047;
+    background-color: #8AA3AE;
     padding: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -68,11 +68,11 @@ button {
     color: rgba(255, 255, 255, 0.65);
     border-radius: 15px;
     padding: 12px 25px 12px;
-    background-color: #252525;
+    background-color: #415B6A;;
     border-style: solid;
     border-width: 1px;
     margin: 1px;
-    border-color: #444444;
+    border-color: #415B6A;
     text-align: center;
     font-size: 16px;
     outline: 0;
@@ -163,7 +163,7 @@ progress[value]::-moz-progress-bar {
 
 .small-dark-bg {
     border-radius: 20px;
-    background-color: #0f0f0f;
+    background-color: #415B6A;
 }
 
 .alert-danger {
@@ -173,7 +173,7 @@ progress[value]::-moz-progress-bar {
 }
 
 .nav-link {
-    color: rgb(145, 145, 145) !important;
+    color: rgb(255, 255, 255) !important;
 }
 
 .nav-link:hover {
@@ -213,7 +213,7 @@ progress[value]::-moz-progress-bar {
 }
 
 .large-box:hover {
-    background: linear-gradient(217deg, rgba(46, 46, 46, 0.1),rgba(70, 70, 70, 0.3)) 70.71%);
+    background: linear-gradient(217deg, rgba(46, 46, 46, 0.1), rgba(70, 70, 70, 0.3) 70.71%);
     border-color: #313131;
 
 }
@@ -243,7 +243,7 @@ progress[value]::-moz-progress-bar {
 }
 
 .modal {
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .modal-label {
@@ -330,7 +330,7 @@ progress[value]::-moz-progress-bar {
 .seed-phrase {
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     background-color: #00000014;
-    color: #202020;
+    color: #133042;
     margin: 10px;
     padding: 10px;
     border-radius: 8px;
@@ -526,7 +526,7 @@ progress[value]::-moz-progress-bar {
 #address-box.large-box {
     width: 96% !important;
     margin: 0 auto;
-    background: linear-gradient(0.15turn, rgba(82, 82, 82, 0.45),rgba(117, 117, 117, 0.02)));
+    background: linear-gradient(0.15turn, rgba(82, 82, 82, 0.45), rgba(117, 117, 117, 0.02));
 }
 
 /* -- Background -- */
@@ -790,7 +790,7 @@ progress[value]::-moz-progress-bar {
 
 .navbarSpecial {
     position: fixed;
-    border-bottom-color: rgb(26, 26, 26);
+    border-bottom-color: rgb(19, 48, 66);
     border-bottom-style: solid;
     border-bottom-width: 1px;
     width: 100%;
@@ -811,7 +811,7 @@ progress[value]::-moz-progress-bar {
   height: auto;
   padding: 8px 18px;
   /* background: linear-gradient(183deg, #9621ff, #7d21ff); */
-  background-image: linear-gradient(183deg, #242424, #1d1d1d);
+  background-image: linear-gradient(183deg, #133042, #415B6A);
   position: relative;
   z-index: 1;
   line-height: 1.25em;
@@ -840,7 +840,7 @@ progress[value]::-moz-progress-bar {
     font-family: Montserrat, sans-serif;
     height: auto;
     padding: 14px 30px;
-    background-image: linear-gradient(183deg, #3a3a3a, #0f0f0f);
+    background-image: linear-gradient(183deg, #133042, #415B6A);
     position: relative;
     z-index: 1;
 
@@ -886,7 +886,7 @@ progress[value]::-moz-progress-bar {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(183deg, #131313, #272727);
+  background-image: linear-gradient(183deg, #133042, #133042);
   z-index: -1;
   transition: all .2s ease-in-out;
   opacity: 0;
@@ -899,7 +899,7 @@ progress[value]::-moz-progress-bar {
     font-family: Montserrat, sans-serif;
     height: auto;
     padding: 8px 16px;
-    background-image: linear-gradient(183deg, #1a1a1a, #222222);
+    background-image: linear-gradient(183deg, #133042, #415B6A);
     position: relative;
     z-index: 1;
 
@@ -951,7 +951,13 @@ progress[value]::-moz-progress-bar {
 }
 
 .home-hero {
-    background: radial-gradient(45vw 80% at 90% 40%, rgba(122, 122, 122, 0.3), rgba(144, 144, 144, 0) 95%), linear-gradient(90deg, rgba(143, 143, 143, 0.9), rgba(112, 112, 112, 0.5) 60%, rgba(126, 126, 126, 0.9)), linear-gradient(35deg, rgba(144, 144, 144, .3), rgba(103, 103, 103, 0.3) 37%, rgba(129, 129, 129, 0.3), rgba(148, 148, 148, 0.3)) 76%, rgba(134, 134, 134, 0.3) 0, rgba(115, 115, 115, 0.3)), linear-gradient(90deg, #8f8f8f, #707070 60%, #8f8f8f);}
+    background: 
+    radial-gradient(45vw 80% at 90% 40%, rgba(122, 122, 122, 0.3), rgba(144, 144, 144, 0) 95%), 
+    linear-gradient(90deg, rgba(143, 143, 143, 0.9), rgba(112, 112, 112, 0.5) 60%, rgba(126, 126, 126, 0.9)), 
+    linear-gradient(35deg, rgba(144, 144, 144, 0.3), rgba(103, 103, 103, 0.3) 37%, rgba(129, 129, 129, 0.3), rgba(148, 148, 148, 0.3) 76%), 
+    rgba(134, 134, 134, 0.3), 
+    rgba(115, 115, 115, 0.3), 
+    linear-gradient(90deg, #8f8f8f, #707070 60%, #8f8f8f);}
 
 .title-section {
     margin-bottom: 20px;
@@ -1185,13 +1191,13 @@ a {
 
 /*TLS DASHBOARD*/
 .dashboard-item {
-    background: rgba(82, 82, 82, 0.75);
+    background: rgba(138, 163, 174, 0.75);
     border-radius: 6px;
     padding: 40px;
     text-align: center;
     float: left;
     margin-bottom: 15px;
-    border: 1px solid white;
+    /*border: 1px solid white;*/
 }
 
 .send-eligibility-section .container .column-padded-around .coinstat-icon,
@@ -2340,7 +2346,7 @@ a {
 }
 
 .dcWallet-warningMessage .shieldLogo .shieldBackground {
-  background-color: rgb(0 0 0 / 18%);
+  background-color: rgba(65, 91, 106, 0.90);
   width: 35px;
   height: 35px;
   border-radius: 10px;
@@ -2380,7 +2386,7 @@ a {
 
 .dcWallet-topRightMenu .dropdown-move .dropdown-menu {
   backdrop-filter: blur(5px);
-  background-color: rgba(85, 85, 85, 0.95);
+  background-color: rgba(65, 91, 106, 0.95);
   border: 1px solid hsl(0, 0%, 8%);
 }
 
@@ -2404,13 +2410,13 @@ a {
 }
 
 .exportKeysModalColor {
-  background-color:#202020c7;
+  background-color:#415B6A!important;
   backdrop-filter: blur(5px);
   color:#fff;
 }
 
 .exportKeysModalColor h3 {
-    color:#929292!important;
+    color:#ffffff!important;
 }
 
 .dcWallet-privateKeyDiv {
@@ -2433,6 +2439,7 @@ a {
   width:85%;
   text-align: center;
   transition: all .2s ease-in-out;
+  color: #C0D9E5;
 }
 
 .dcWallet-privateKeyDiv .blurred {
@@ -2491,7 +2498,7 @@ input {
     border-radius: 24px;
     border-top-left-radius: 7px;
     border-bottom-right-radius: 7px;
-    background-image: linear-gradient(183deg, #3d3d3d, #3a3a3a);
+    background-image: linear-gradient(183deg, #133042, #415B6A);
     cursor: pointer;
 }
 
@@ -2504,7 +2511,7 @@ input {
     border-radius: 24px;
     border-top-right-radius: 7px;
     border-bottom-left-radius: 7px;
-    background-image: linear-gradient(183deg, #3d3d3d, #3a3a3a);
+    background-image: linear-gradient(183deg, #133042, #415B6A);
     cursor:pointer;
 }
 
@@ -2653,12 +2660,12 @@ input {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #797979;
+    background: #415B6A;
     border-radius:10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #696969; 
+    background: #8AA3AE; 
 }
 
 @media (min-width: 768px) {
@@ -2686,7 +2693,7 @@ select.form-control:focus {
 }
 
 select.form-control option {
-    background-color: hsl(0, 0%, 23%);
+    background-color: hsl(202, 24%, 34%);
 }
 
 .settingsMenu {
@@ -2713,12 +2720,12 @@ select.form-control option {
 }
 
 .settingsMenu .active {
-    color:hsl(272 62% 81% / 1)!important;
+    color:hsl(197 43% 82% / 1)!important;
     background-color: hsla(0, 0%, 26%, 0.19);
 }
 
 .settingsContent {
-    background-color:hsla(0, 0%, 27%, 0.14);
+    background-color:hsla(197, 43%, 82%, 0.40);
     border-radius: 9px;
     padding-top:13px;
     padding-bottom:20px;
@@ -2772,8 +2779,8 @@ select.form-control option {
 
 .custom-control-input:checked~.custom-control-label::before {
     color: #fff;
-    border-color: #4d4d4d;
-    background-color: #444444;
+    border-color: #415B6A;
+    background-color: #415B6A;
 }
 
 .custom-control-input:focus:not(:checked)~.custom-control-label::before {
@@ -3213,7 +3220,7 @@ select.form-control option {
 .notifyWrapper {
     opacity: 1;
     z-index: 999999;
-    background-color:#363636;
+    background-color:#8AA3AE;
     border-radius:5px;
     display: inline-flex;
     align-items: stretch;
@@ -3236,24 +3243,24 @@ select.form-control option {
 }
 
 .notifyWrapper .notify-warning {
-    background-color:#630808;
-    border-top:1px solid #FF0000;
-    border-left:1px solid #FF0000;
-    border-bottom:1px solid #FF0000;
+    background-color:#a19f07;
+    border-top:1px solid #a19f07;
+    border-left:1px solid #a19f07;
+    border-bottom:1px solid #a19f07;
 }
 
 .notifyWrapper .notify-info {
-    background-color:#084363;
-    border-top:1px solid #0095ff;
-    border-left:1px solid #0095ff;
-    border-bottom:1px solid #0095ff;
+    background-color:#C0D9E5;
+    border-top:1px solid #C0D9E5;
+    border-left:1px solid #C0D9E5;
+    border-bottom:1px solid #C0D9E5;
 }
 
 .notifyWrapper .notify-success {
-    background-color:#1c6308;
-    border-top:1px solid #1aff00;
-    border-left:1px solid #1aff00;
-    border-bottom:1px solid #1aff00;
+    background-color:#415B6A;
+    border-top:1px solid #415B6A;
+    border-left:1px solid #415B6A;
+    border-bottom:1px solid #415B6A;
 }
 
 .notifyWrapper .notifyText {
@@ -3274,7 +3281,7 @@ select.form-control option {
 .sliderStyle .tooltip-inner {
     width: 30px;
     height: 30px;
-    background-color: #ffffffb3;
+    background-color: #BEDAE5;
     border-radius: 25%;
     color: #000;
     font-weight: 500;
@@ -3299,7 +3306,7 @@ select.form-control option {
     width: 25px;
     height: 25px;
     border-radius: 50%; 
-    background: #474747;
+    background: #415B6A;
     cursor: pointer;
 }
 
@@ -3307,7 +3314,7 @@ select.form-control option {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #5c5c5c;
+    background: #415B6A;
     cursor: pointer;
 }
 
@@ -3323,16 +3330,16 @@ select.form-control option {
 }
 
 .sliderDisplay {
-    /*position: absolute;
+    position: absolute;
     top: 50%;
     margin-left: 0px;
     transform: translate(-50%, -50%);
     margin-top: -6px;
     z-index: 40;
-    pointer-events: none;*/
+    pointer-events: none;
     
-    /*text-align: center;*/
-    /*width: 2em;*/
+    text-align: center;
+    width: 2em;
 }
 
 @media (min-width:768px) {

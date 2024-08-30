@@ -4,7 +4,7 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=9" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     <!-- Primary Meta Tags -->
     <title>My Telestai Wallet</title>
     <meta name="title" content="My Telestai Wallet" />
@@ -84,10 +84,10 @@
                 </button>
               </div>
               <div class="modal-body center-text">
-                <code id="ModalQRLabel" class="wallet-code"></code>
+                <code id="ModalQRLabel" class="wallet-code" style="color: #C0D9E5;"></code>
                 <div id="ModalQR" style="padding: 17px 10px 10px 10px;" class="auto-fit"></div>
                 <center>
-                  <div id="ModalQRReceiveTypeBtn" onclick="MPW.guiToggleReceiveType()" style="cursor: pointer; border: 0px; border-radius: 7px; padding: 6px 10px; margin: 0px 1px; background: linear-gradient(183deg, #1b1b1b9c, #2b2b2bc7); color: #fff; font-weight: bold; width: fit-content; margin: 20px 0px;">
+                  <div id="ModalQRReceiveTypeBtn" onclick="MPW.guiToggleReceiveType()" style="cursor: pointer; border: 0px; border-radius: 7px; padding: 6px 10px; margin: 0px 1px; background: linear-gradient(183deg, #133042, #415B6A); color: #fff; font-weight: bold; width: fit-content; margin: 20px 0px;">
                     Change to Address
                   </div>
                 </center>
@@ -134,9 +134,9 @@
         <!-- // CONFIRM MODAL -->
         <div class="modal" id="confirmModal" tabindex="-1" style="z-index: 2000; background-color: #00000063;" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
           <div id="confirmModalDialog" class="modal-dialog modal-dialog-centered max-w-600" role="document">
-            <div id="confirmModalMain" class="modal-content">
+            <div id="confirmModalMain" class="modal-content" style="background-color: #415B6A !important;">
               <div class="modal-header" id="confirmModalHeader">
-                <h3 class="modal-title" id="confirmModalTitle" style="text-align: center; width: 100%; color: #1f1f1f;"></h3>
+                <h3 class="modal-title" id="confirmModalTitle" style="text-align: center; width: 100%; color: #ffffff !important;"></h3>
               </div>
               <div id="confirmModalContent" class="modal-body center-text">
                 <!-- JS populated modal content -->
@@ -562,13 +562,13 @@
                       <hr>
                       <div id="changePassword-container">
 
-                        <div id="changePasswordBtn" onclick="MPW.changePassword()" style="cursor: pointer; border: 0px; border-radius: 7px; padding: 6px 10px; margin: 0px 1px; background: linear-gradient(183deg, #3636369c, #222222c7); color: #fff; font-weight: bold; width: fit-content; margin: 20px 0px;">
+                        <div id="changePasswordBtn" onclick="MPW.changePassword()" style="cursor: pointer; border: 0px; border-radius: 7px; padding: 6px 10px; margin: 0px 1px; background: linear-gradient(183deg, #133042, #415B6A); color: #fff; font-weight: bold; width: fit-content; margin: 20px 0px;">
                           Change Password
                         </div>
                         <hr>
                       </div>
                       <div id="logOut-container">
-                        <div onclick="MPW.logOut()" style="cursor: pointer; border: 0px; border-radius: 7px; padding: 6px 10px; margin: 0px 1px; background: linear-gradient(183deg, #2424249c, #202020c7); color: #fff; font-weight: bold; width: fit-content; margin: 20px 0px;">
+                        <div onclick="MPW.logOut()" style="cursor: pointer; border: 0px; border-radius: 7px; padding: 6px 10px; margin: 0px 1px; background: linear-gradient(183deg, #133042, #415B6A); color: #fff; font-weight: bold; width: fit-content; margin: 20px 0px;">
                           Delete Wallet
                         </div>
                         <hr>

@@ -564,7 +564,7 @@ defineExpose({
                                 style="
                                     text-align: center;
                                     width: 100%;
-                                    color: #8e21ff;
+                                    color: #415B6A;
                                 "
                             >
                                 Redeem Code
@@ -617,7 +617,7 @@ defineExpose({
                                         <div
                                             class="input-group"
                                             style="
-                                                border-color: #9121ff;
+                                                border-color: #415B6A;
                                                 border-style: solid;
                                                 border-radius: 10px;
                                             "
@@ -691,7 +691,7 @@ defineExpose({
                                                 <div
                                                     class="input-group"
                                                     style="
-                                                        border-color: #9121ff;
+                                                        border-color: #415B6A;
                                                         border-style: solid;
                                                         border-radius: 10px;
                                                     "
@@ -718,7 +718,7 @@ defineExpose({
                                                 <div
                                                     class="input-group"
                                                     style="
-                                                        border-color: #9121ff;
+                                                        border-color: #415B6A;
                                                         border-style: solid;
                                                         border-radius: 10px;
                                                     "
@@ -833,7 +833,7 @@ defineExpose({
                                 style="
                                     text-align: center;
                                     width: 100%;
-                                    color: #d5adff;
+                                    color: #415b6a;
                                 "
                             >
                                 {{ translation.contacts }}
@@ -849,7 +849,7 @@ defineExpose({
                                 aria-label="Close"
                                 class="tls-button-big"
                                 data-i18n="popupClose"
-                                style="color: #fff; float: right; opacity: 0.8"
+                                style="float: right; opacity: 0.8"
                             >
                                 Close
                             </button>

@@ -215,18 +215,6 @@ function reload() {
                                             }}</span
                                         >
                                     </a>
-                                    <a
-                                        class="dropdown-item ptr"
-                                        data-toggle="modal"
-                                        data-target="#redeemCodeModal"
-                                    >
-                                        <i class="fa-solid fa-gift"></i>
-                                        <span
-                                            >&nbsp;{{
-                                                translation.redeemOrCreateCode
-                                            }}</span
-                                        >
-                                    </a>
                                 </div>
                             </div>
                         </div>
