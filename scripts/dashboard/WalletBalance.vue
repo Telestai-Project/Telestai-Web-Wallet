@@ -255,7 +255,7 @@ function reload() {
             </span>
             <br />
             <div class="dcWallet-usdBalance">
-                <span class="dcWallet-usdValue">{{ balanceValue }}</span>
+                <span class="dcWallet-usdValue">0.00</span>
                 <span class="dcWallet-usdValue">&nbsp;{{ currency }}</span>
             </div>
 
