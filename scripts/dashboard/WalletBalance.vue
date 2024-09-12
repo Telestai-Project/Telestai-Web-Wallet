@@ -22,6 +22,7 @@ const props = defineProps({
     currency: String,
     price: Number,
     displayDecimals: Number,
+    wallet: Object,
 });
 const {
     jdenticonValue,
@@ -185,7 +186,7 @@ function reload() {
                                         data-target="#exportPrivateKeysModal"
                                         data-backdrop="static"
                                         data-keyboard="false"
-                                        v-if="!isHardwareWallet"
+                                        v-if="!isHardwareWallet && !wallet.isViewOnly.value"
                                         @click="$emit('exportPrivKeyOpen')"
                                     >
                                         <i class="fas fa-key"></i>

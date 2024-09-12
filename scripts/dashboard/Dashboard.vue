@@ -884,6 +884,7 @@ defineExpose({
                         :currency="currency"
                         :price="price"
                         :displayDecimals="displayDecimals"
+                        :wallet="wallet"
                         @reload="refreshChainData()"
                         @send="showTransferMenu = true"
                         @exportPrivKeyOpen="showExportModal = true"
