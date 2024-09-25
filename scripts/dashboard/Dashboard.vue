@@ -564,7 +564,7 @@ defineExpose({
                                 style="
                                     text-align: center;
                                     width: 100%;
-                                    color: #415B6A;
+                                    color: #9c9876;
                                 "
                             >
                                 Redeem Code
@@ -617,7 +617,7 @@ defineExpose({
                                         <div
                                             class="input-group"
                                             style="
-                                                border-color: #415B6A;
+                                                border-color: #9c9876;
                                                 border-style: solid;
                                                 border-radius: 10px;
                                             "
@@ -691,7 +691,7 @@ defineExpose({
                                                 <div
                                                     class="input-group"
                                                     style="
-                                                        border-color: #415B6A;
+                                                        border-color: #9c9876;
                                                         border-style: solid;
                                                         border-radius: 10px;
                                                     "
@@ -718,7 +718,7 @@ defineExpose({
                                                 <div
                                                     class="input-group"
                                                     style="
-                                                        border-color: #415B6A;
+                                                        border-color: #9c9876;
                                                         border-style: solid;
                                                         border-radius: 10px;
                                                     "

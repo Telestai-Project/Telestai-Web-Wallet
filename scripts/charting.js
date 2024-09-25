@@ -50,7 +50,7 @@ async function getWalletDataset() {
         arrBreakdown.push({
             type: translation.chartPublicAvailable,
             balance: spendable_bal / COIN,
-            colour: 'rgba(138, 163, 174, 1)',
+            colour: 'rgba(193, 193, 193, 1)',
         });
     }
 
@@ -59,7 +59,7 @@ async function getWalletDataset() {
         arrBreakdown.push({
             type: translation.chartImmatureBalance,
             balance: immature_bal / COIN,
-            colour: 'rgba(192, 217, 229, 1)',
+            colour: 'rgba(193, 193, 193, 1)',
         });
     }
     // Staking (Locked)

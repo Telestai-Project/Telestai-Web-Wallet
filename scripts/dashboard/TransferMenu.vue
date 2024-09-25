@@ -164,8 +164,8 @@ async function selectContact() {
                                                 margin: 0px 1px;
                                                 background: linear-gradient(
                                                     183deg,
-                                                    #133042,
-                                                    #415B6A
+                                                    #050708,
+                                                    #9c9876
                                                 );
                                                 color: #fff;
                                                 font-weight: bold;
@@ -265,7 +265,7 @@ async function selectContact() {
     min-height: 155px;
     transition: 0.4s;
     /*background-color:rgba(255, 255, 255, 12%)!important;*/
-    background-color: #415B6A;
+    background-color: #9c9876;
 }
 
 @media (min-width: 768px) {

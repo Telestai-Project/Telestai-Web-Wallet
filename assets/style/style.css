@@ -1,25 +1,23 @@
 html {
-    font-family: Chivo, sans-serif;
+    font-family: 'Azo Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bree GRK var', serif;
 }
 
 p,
 span,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 li,
 a,
 input,
 label,
 button {
-    font-family: Montserrat, sans-serif !important;
+    font-family: 'Azo Sans', sans-serif !important;
 }
 
 body {
-    background-color: rgb(65, 91, 106);
+    background-color: rgb(156, 152, 118);
     color: #f2f8fa;
 }
 
@@ -27,7 +25,7 @@ pre {
     display: block;
     font-size: 87.5%;
     color: inherit;
-    background-color: #8AA3AE;
+    background-color: #c1c1c1;
     padding: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -68,11 +66,11 @@ button {
     color: rgba(255, 255, 255, 0.65);
     border-radius: 15px;
     padding: 12px 25px 12px;
-    background-color: #415B6A;;
+    background-color: #9c9876;;
     border-style: solid;
     border-width: 1px;
     margin: 1px;
-    border-color: #415B6A;
+    border-color: #9c9876;
     text-align: center;
     font-size: 16px;
     outline: 0;
@@ -163,7 +161,7 @@ progress[value]::-moz-progress-bar {
 
 .small-dark-bg {
     border-radius: 20px;
-    background-color: #415B6A;
+    background-color: #9c9876;
 }
 
 .alert-danger {
@@ -330,7 +328,7 @@ progress[value]::-moz-progress-bar {
 .seed-phrase {
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     background-color: #00000014;
-    color: #133042;
+    color: #050708;
     margin: 10px;
     padding: 10px;
     border-radius: 8px;
@@ -790,7 +788,7 @@ progress[value]::-moz-progress-bar {
 
 .navbarSpecial {
     position: fixed;
-    border-bottom-color: rgb(19, 48, 66);
+    border-bottom-color: rgb(5, 7, 8);
     border-bottom-style: solid;
     border-bottom-width: 1px;
     width: 100%;
@@ -810,8 +808,8 @@ progress[value]::-moz-progress-bar {
   font-family: Montserrat, sans-serif;
   height: auto;
   padding: 8px 18px;
-  /* background: linear-gradient(183deg, #9621ff, #7d21ff); */
-  background-image: linear-gradient(183deg, #133042, #415B6A);
+  background: linear-gradient(183deg, #403e28, #403e28);
+  /*background-image: linear-gradient(183deg, #050708, #9c9876);*/
   position: relative;
   z-index: 1;
   line-height: 1.25em;
@@ -840,7 +838,7 @@ progress[value]::-moz-progress-bar {
     font-family: Montserrat, sans-serif;
     height: auto;
     padding: 14px 30px;
-    background-image: linear-gradient(183deg, #133042, #415B6A);
+    background-image: linear-gradient(183deg, #403e28, #403e28);
     position: relative;
     z-index: 1;
 
@@ -886,7 +884,7 @@ progress[value]::-moz-progress-bar {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(183deg, #133042, #133042);
+  background-image: linear-gradient(183deg, #9c9876, #9c9876);
   z-index: -1;
   transition: all .2s ease-in-out;
   opacity: 0;
@@ -899,7 +897,7 @@ progress[value]::-moz-progress-bar {
     font-family: Montserrat, sans-serif;
     height: auto;
     padding: 8px 16px;
-    background-image: linear-gradient(183deg, #133042, #415B6A);
+    background-image: linear-gradient(183deg, #403e28, #403e28);
     position: relative;
     z-index: 1;
 
@@ -940,7 +938,8 @@ progress[value]::-moz-progress-bar {
 }
 
 .tls-button-big:hover::before {
-  opacity: 1;
+    background-color: #9c9876;
+    opacity: 1;
 }
 
 .button-padd {
@@ -1191,7 +1190,7 @@ a {
 
 /*TLS DASHBOARD*/
 .dashboard-item {
-    background: rgba(138, 163, 174, 0.75);
+    background: rgba(193, 193, 193, 0.40);
     border-radius: 6px;
     padding: 40px;
     text-align: center;
@@ -2346,7 +2345,7 @@ a {
 }
 
 .dcWallet-warningMessage .shieldLogo .shieldBackground {
-  background-color: rgba(65, 91, 106, 0.90);
+  background-color: rgba(64, 62, 40, 0.90);
   width: 35px;
   height: 35px;
   border-radius: 10px;
@@ -2386,7 +2385,7 @@ a {
 
 .dcWallet-topRightMenu .dropdown-move .dropdown-menu {
   backdrop-filter: blur(5px);
-  background-color: rgba(65, 91, 106, 0.95);
+  background-color: rgba(156, 152, 118, 0.95);
   border: 1px solid hsl(0, 0%, 8%);
 }
 
@@ -2410,7 +2409,7 @@ a {
 }
 
 .exportKeysModalColor {
-  background-color:#415B6A!important;
+  background-color:#9c9876!important;
   backdrop-filter: blur(5px);
   color:#fff;
 }
@@ -2439,7 +2438,7 @@ a {
   width:85%;
   text-align: center;
   transition: all .2s ease-in-out;
-  color: #C0D9E5;
+  color: #c1c1c1;
 }
 
 .dcWallet-privateKeyDiv .blurred {
@@ -2490,7 +2489,7 @@ input {
 }
 
 .dcWallet-btn-left {
-    background-color: #ffffff29;
+    background-color: #403e28;
     width: 100px;
     height: 43px;
     margin-top: 17px;
@@ -2498,12 +2497,12 @@ input {
     border-radius: 24px;
     border-top-left-radius: 7px;
     border-bottom-right-radius: 7px;
-    background-image: linear-gradient(183deg, #133042, #415B6A);
+    background-image: linear-gradient(183deg, #403e28, #403e28);
     cursor: pointer;
 }
 
 .dcWallet-btn-right {
-    background-color: #ffffff29;
+    background-color: #403e28;
     width: 100px;
     height: 43px;
     margin-top: 17px;
@@ -2511,7 +2510,7 @@ input {
     border-radius: 24px;
     border-top-right-radius: 7px;
     border-bottom-left-radius: 7px;
-    background-image: linear-gradient(183deg, #133042, #415B6A);
+    background-image: linear-gradient(183deg, #403e28, #403e28);
     cursor:pointer;
 }
 
@@ -2660,12 +2659,12 @@ input {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #415B6A;
+    background: #9c9876;
     border-radius:10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #8AA3AE; 
+    background: #c1c1c1; 
 }
 
 @media (min-width: 768px) {
@@ -2693,7 +2692,7 @@ select.form-control:focus {
 }
 
 select.form-control option {
-    background-color: hsl(202, 24%, 34%);
+    background-color: hsl(54, 16%, 54%);
 }
 
 .settingsMenu {
@@ -2720,12 +2719,12 @@ select.form-control option {
 }
 
 .settingsMenu .active {
-    color:hsl(197 43% 82% / 1)!important;
+    color:hsl(0 0% 76% / 1)!important;
     background-color: hsla(0, 0%, 26%, 0.19);
 }
 
 .settingsContent {
-    background-color:hsla(197, 43%, 82%, 0.40);
+    background-color:hsla(0, 0%, 76%, 0.40);
     border-radius: 9px;
     padding-top:13px;
     padding-bottom:20px;
@@ -2779,8 +2778,8 @@ select.form-control option {
 
 .custom-control-input:checked~.custom-control-label::before {
     color: #fff;
-    border-color: #415B6A;
-    background-color: #415B6A;
+    border-color: #9c9876;
+    background-color: #9c9876;
 }
 
 .custom-control-input:focus:not(:checked)~.custom-control-label::before {
@@ -3220,7 +3219,7 @@ select.form-control option {
 .notifyWrapper {
     opacity: 1;
     z-index: 999999;
-    background-color:#8AA3AE;
+    background-color:#c1c1c1;
     border-radius:5px;
     display: inline-flex;
     align-items: stretch;
@@ -3250,17 +3249,17 @@ select.form-control option {
 }
 
 .notifyWrapper .notify-info {
-    background-color:#C0D9E5;
-    border-top:1px solid #C0D9E5;
-    border-left:1px solid #C0D9E5;
-    border-bottom:1px solid #C0D9E5;
+    background-color:#c1c1c1;
+    border-top:1px solid #c1c1c1;
+    border-left:1px solid #c1c1c1;
+    border-bottom:1px solid #c1c1c1;
 }
 
 .notifyWrapper .notify-success {
-    background-color:#415B6A;
-    border-top:1px solid #415B6A;
-    border-left:1px solid #415B6A;
-    border-bottom:1px solid #415B6A;
+    background-color:#9c9876;
+    border-top:1px solid #9c9876;
+    border-left:1px solid #9c9876;
+    border-bottom:1px solid #9c9876;
 }
 
 .notifyWrapper .notifyText {
@@ -3281,7 +3280,7 @@ select.form-control option {
 .sliderStyle .tooltip-inner {
     width: 30px;
     height: 30px;
-    background-color: #BEDAE5;
+    background-color: #c1c1c1;
     border-radius: 25%;
     color: #000;
     font-weight: 500;
@@ -3306,7 +3305,7 @@ select.form-control option {
     width: 25px;
     height: 25px;
     border-radius: 50%; 
-    background: #415B6A;
+    background: #9c9876;
     cursor: pointer;
 }
 
@@ -3314,7 +3313,7 @@ select.form-control option {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #415B6A;
+    background: #9c9876;
     cursor: pointer;
 }
 

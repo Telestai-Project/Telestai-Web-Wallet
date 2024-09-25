@@ -35,6 +35,8 @@
 
     <link rel="icon" type="image/png" href="/logo_opaque-dark-bg.png" />
     <link rel="canonical" href="https://webwallet.telestai.io/" />
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Azo+Sans&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -84,10 +86,10 @@
                 </button>
               </div>
               <div class="modal-body center-text">
-                <code id="ModalQRLabel" class="wallet-code" style="color: #C0D9E5;"></code>
+                <code id="ModalQRLabel" class="wallet-code" style="color: #c1c1c1;"></code>
                 <div id="ModalQR" style="padding: 17px 10px 10px 10px;" class="auto-fit"></div>
                 <center>
-                  <div id="ModalQRReceiveTypeBtn" onclick="MPW.guiToggleReceiveType()" style="cursor: pointer; border: 0px; border-radius: 7px; padding: 6px 10px; margin: 0px 1px; background: linear-gradient(183deg, #133042, #415B6A); color: #fff; font-weight: bold; width: fit-content; margin: 20px 0px;">
+                  <div id="ModalQRReceiveTypeBtn" onclick="MPW.guiToggleReceiveType()" style="cursor: pointer; border: 0px; border-radius: 7px; padding: 6px 10px; margin: 0px 1px; background: linear-gradient(183deg, #403e28, #403e28); color: #fff; font-weight: bold; width: fit-content; margin: 20px 0px;">
                     Change to Address
                   </div>
                 </center>
@@ -134,7 +136,7 @@
         <!-- // CONFIRM MODAL -->
         <div class="modal" id="confirmModal" tabindex="-1" style="z-index: 2000; background-color: #00000063;" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
           <div id="confirmModalDialog" class="modal-dialog modal-dialog-centered max-w-600" role="document">
-            <div id="confirmModalMain" class="modal-content" style="background-color: #415B6A !important;">
+            <div id="confirmModalMain" class="modal-content" style="background-color: #9c9876 !important;">
               <div class="modal-header" id="confirmModalHeader">
                 <h3 class="modal-title" id="confirmModalTitle" style="text-align: center; width: 100%; color: #ffffff !important;"></h3>
               </div>
@@ -562,13 +564,13 @@
                       <hr>
                       <div id="changePassword-container">
 
-                        <div id="changePasswordBtn" onclick="MPW.changePassword()" style="cursor: pointer; border: 0px; border-radius: 7px; padding: 6px 10px; margin: 0px 1px; background: linear-gradient(183deg, #133042, #415B6A); color: #fff; font-weight: bold; width: fit-content; margin: 20px 0px;">
+                        <div id="changePasswordBtn" onclick="MPW.changePassword()" style="cursor: pointer; border: 0px; border-radius: 7px; padding: 6px 10px; margin: 0px 1px; background: linear-gradient(183deg, #403e28, #403e28); color: #fff; font-weight: bold; width: fit-content; margin: 20px 0px;">
                           Change Password
                         </div>
                         <hr>
                       </div>
                       <div id="logOut-container">
-                        <div onclick="MPW.logOut()" style="cursor: pointer; border: 0px; border-radius: 7px; padding: 6px 10px; margin: 0px 1px; background: linear-gradient(183deg, #133042, #415B6A); color: #fff; font-weight: bold; width: fit-content; margin: 20px 0px;">
+                        <div onclick="MPW.logOut()" style="cursor: pointer; border: 0px; border-radius: 7px; padding: 6px 10px; margin: 0px 1px; background: linear-gradient(183deg, #403e28, #403e28); color: #fff; font-weight: bold; width: fit-content; margin: 20px 0px;">
                           Delete Wallet
                         </div>
                         <hr>
