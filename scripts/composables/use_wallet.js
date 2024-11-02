@@ -22,13 +22,23 @@ export function useWallet() {
 
     const setMasterKey = async (mk) => {
         wallet.setMasterKey(mk);
-        isImported.value = wallet.isLoaded();
-        isHardwareWallet.value = wallet.isHardwareWallet();
-        isHD.value = wallet.isHD();
-        isViewOnly.value = wallet.isViewOnly();
-        isEncrypted.value = await hasEncryptedWallet();
+        
+        const isLoaded = wallet.isLoaded();
+        const isHardware = wallet.isHardwareWallet();
+        const isHDWallet = wallet.isHD();
+        const isViewOnlyMode = wallet.isViewOnly();
+        const encrypted = await hasEncryptedWallet();
+
+        isImported.value = isLoaded;
+        isHardwareWallet.value = isHardware;
+        isHD.value = isHDWallet;
+        isViewOnly.value = isViewOnlyMode;
+        isEncrypted.value = encrypted;
     };
     const getAddress = () => wallet.getAddress();
+    const getCurrentAddress = () => wallet.getCurrentAddress();
+    const getCurrentDerivationPath = () => wallet.getCurrentDerivationPath();
+    const getMasterKey = () => wallet.getMasterKey();
     const isHardwareWallet = ref(wallet.isHardwareWallet());
     const isHD = ref(wallet.isHD());
     const checkDecryptPassword = async (passwd) =>
@@ -64,6 +74,9 @@ export function useWallet() {
         checkDecryptPassword,
         encrypt,
         getAddress,
+        getCurrentAddress,
+        getCurrentDerivationPath,
+        getMasterKey,
         wipePrivateData: () => {
             wallet.wipePrivateData();
             isViewOnly.value = wallet.isViewOnly();

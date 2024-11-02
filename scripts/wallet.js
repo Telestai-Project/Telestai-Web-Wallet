@@ -418,6 +418,13 @@ export class Wallet {
         );
     }
 
+    getCurrentDerivationPath(nReceiving = 0) {
+        // Retrieve the current index for the specified receiving type
+        const currentIndex = this.#addressIndices.get(nReceiving);
+        // Use the current index to get the derivation path
+        return this.getDerivationPath(nReceiving, currentIndex);
+    }
+
     getKeyToExport() {
         return this.#masterKey?.getKeyToExport(this.#nAccount);
     }

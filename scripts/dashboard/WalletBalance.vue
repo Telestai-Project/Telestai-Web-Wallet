@@ -12,6 +12,7 @@ import {
     guiRenderContacts,
 } from '../contacts-book';
 import { getNewAddress } from '../wallet.js';
+import SignMessageModal from './SignMessageModal.vue';
 
 const props = defineProps({
     jdenticonValue: String,
@@ -106,191 +107,203 @@ function reload() {
 </script>
 
 <template>
-    <center>
-        <div class="dcWallet-balances mb-4">
-            <div class="row lessBot p-0">
-                <div
-                    class="col-6 d-flex dcWallet-topLeftMenu"
-                    style="justify-content: flex-start"
-                >
-                    <h3 class="noselect balance-title">
-                        <span class="reload noselect" @click="reload()"
-                            ><i
-                                class="fa-solid fa-rotate-right"
-                                :class="{ playAnim: updating }"
-                            ></i
-                        ></span>
-                    </h3>
-                </div>
+    <div>
+        <center>
+            <div class="dcWallet-balances mb-4">
+                <div class="row lessBot p-0">
+                    <div
+                        class="col-6 d-flex dcWallet-topLeftMenu"
+                        style="justify-content: flex-start"
+                    >
+                        <h3 class="noselect balance-title">
+                            <span class="reload noselect" @click="reload()"
+                                ><i
+                                    class="fa-solid fa-rotate-right"
+                                    :class="{ playAnim: updating }"
+                                ></i
+                            ></span>
+                        </h3>
+                    </div>
 
-                <div
-                    class="col-6 d-flex dcWallet-topRightMenu"
-                    style="justify-content: flex-end"
-                >
-                    <div class="btn-group dropleft">
-                        <i
-                            class="fa-solid fa-ellipsis-vertical"
-                            style="width: 20px"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                        ></i>
-                        <div class="dropdown">
-                            <div class="dropdown-move">
-                                <div
-                                    class="dropdown-menu"
-                                    aria-labelledby="dropdownMenuButton"
-                                >
-                                    <a
-                                        class="dropdown-item ptr"
-                                        @click="renderWalletBreakdown()"
-                                        data-toggle="modal"
-                                        data-target="#walletBreakdownModal"
+                    <div
+                        class="col-6 d-flex dcWallet-topRightMenu"
+                        style="justify-content: flex-end"
+                    >
+                        <div class="btn-group dropleft">
+                            <i
+                                class="fa-solid fa-ellipsis-vertical"
+                                style="width: 20px"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                            ></i>
+                            <div class="dropdown">
+                                <div class="dropdown-move">
+                                    <div
+                                        class="dropdown-menu"
+                                        aria-labelledby="dropdownMenuButton"
                                     >
-                                        <i class="fa-solid fa-chart-pie"></i>
-                                        <span
-                                            >&nbsp;{{
-                                                translation.balanceBreakdown
-                                            }}</span
+                                        <a
+                                            class="dropdown-item ptr"
+                                            @click="renderWalletBreakdown()"
+                                            data-toggle="modal"
+                                            data-target="#walletBreakdownModal"
                                         >
-                                    </a>
-                                    <a
-                                        class="dropdown-item ptr"
-                                        @click="openExplorer()"
-                                    >
-                                        <i
-                                            class="fa-solid fa-magnifying-glass"
-                                        ></i>
-                                        <span
-                                            >&nbsp;{{
-                                                translation.viewOnExplorer
-                                            }}</span
+                                            <i class="fa-solid fa-chart-pie"></i>
+                                            <span
+                                                >&nbsp;{{
+                                                    translation.balanceBreakdown
+                                                }}</span
+                                            >
+                                        </a>
+                                        <a
+                                            class="dropdown-item ptr"
+                                            @click="openExplorer()"
                                         >
-                                    </a>
-                                    <a
-                                        class="dropdown-item ptr"
-                                        @click="guiRenderContacts()"
-                                        data-toggle="modal"
-                                        data-target="#contactsModal"
-                                    >
-                                        <i class="fa-solid fa-address-book"></i>
-                                        <span
-                                            >&nbsp;{{
-                                                translation.contacts
-                                            }}</span
+                                            <i
+                                                class="fa-solid fa-magnifying-glass"
+                                            ></i>
+                                            <span
+                                                >&nbsp;{{
+                                                    translation.viewOnExplorer
+                                                }}</span
+                                            >
+                                        </a>
+                                        <a
+                                            class="dropdown-item ptr"
+                                            @click="guiRenderContacts()"
+                                            data-toggle="modal"
+                                            data-target="#contactsModal"
                                         >
-                                    </a>
-                                    <a
-                                        class="dropdown-item ptr"
-                                        data-toggle="modal"
-                                        data-target="#exportPrivateKeysModal"
-                                        data-backdrop="static"
-                                        data-keyboard="false"
-                                        v-if="!isHardwareWallet && !wallet.isViewOnly.value"
-                                        @click="$emit('exportPrivKeyOpen')"
-                                    >
-                                        <i class="fas fa-key"></i>
-                                        <span
-                                            >&nbsp;{{
-                                                translation.export
-                                            }}</span
+                                            <i class="fa-solid fa-address-book"></i>
+                                            <span
+                                                >&nbsp;{{
+                                                    translation.contacts
+                                                }}</span
+                                            >
+                                        </a>
+                                        <a
+                                            class="dropdown-item ptr"
+                                            data-toggle="modal"
+                                            data-target="#exportPrivateKeysModal"
+                                            data-backdrop="static"
+                                            data-keyboard="false"
+                                            v-if="!isHardwareWallet && !wallet.isViewOnly.value"
+                                            @click="$emit('exportPrivKeyOpen')"
                                         >
-                                    </a>
+                                            <i class="fas fa-key"></i>
+                                            <span
+                                                >&nbsp;{{
+                                                    translation.export
+                                                }}</span
+                                            >
+                                        </a>
 
-                                    <a
-                                        class="dropdown-item ptr"
-                                        v-if="isHdWallet"
-                                        data-toggle="modal"
-                                        data-target="#qrModal"
-                                        @click="
-                                            getNewAddress({
-                                                updateGUI: true,
-                                                verify: true,
-                                            })
-                                        "
-                                    >
-                                        <i class="fas fa-sync-alt"></i>
-                                        <span
-                                            >&nbsp;{{
-                                                translation.refreshAddress
-                                            }}</span
+                                        <a
+                                            class="dropdown-item ptr"
+                                            v-if="isHdWallet"
+                                            data-toggle="modal"
+                                            data-target="#qrModal"
+                                            @click="
+                                                getNewAddress({
+                                                    updateGUI: true,
+                                                    verify: true,
+                                                })
+                                            "
                                         >
-                                    </a>
+                                            <i class="fas fa-sync-alt"></i>
+                                            <span
+                                                >&nbsp;{{
+                                                    translation.refreshAddress
+                                                }}</span
+                                            >
+                                        </a>
+                                        <a
+                                            class="dropdown-item ptr"
+                                            data-toggle="modal"
+                                            data-target="#signMsgModal"
+                                            v-if="!wallet.isViewOnly.value"
+                                        >
+                                            <i class="fas fa-pen"></i>
+                                            <span>&nbsp;Sign a Msg</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <canvas
-                id="identicon"
-                class="innerShadow"
-                width="65"
-                height="65"
-                style="width: 65px; height: 65px"
-            ></canvas
-            ><br />
-            <span
-                class="ptr"
-                @click="renderWalletBreakdown()"
-                data-toggle="modal"
-                data-target="#walletBreakdownModal"
-            >
-                <span class="dcWallet-tlsBalance" v-html="balanceStr"> </span>
-                <i
-                    class="fa-solid fa-plus"
-                    v-if="immatureBalance != 0"
-                    style="opacity: 0.5; position: relative; left: 2px"
-                ></i>
+                <canvas
+                    id="identicon"
+                    class="innerShadow"
+                    width="65"
+                    height="65"
+                    style="width: 65px; height: 65px"
+                ></canvas
+                ><br />
                 <span
-                    style="position: relative; left: 4px; font-size: 17px"
-                    v-if="immatureBalance != 0"
-                    v-html="immatureBalanceStr"
-                ></span>
-                <span
-                    class="dcWallet-tlsTicker"
-                    style="position: relative; left: 4px"
-                    >&nbsp;{{ ticker }}&nbsp;</span
+                    class="ptr"
+                    @click="renderWalletBreakdown()"
+                    data-toggle="modal"
+                    data-target="#walletBreakdownModal"
                 >
-            </span>
-            <br />
-            <div class="dcWallet-usdBalance">
-                <span class="dcWallet-usdValue">0.00</span>
-                <span class="dcWallet-usdValue">&nbsp;{{ currency }}</span>
-            </div>
-
-            <div class="row lessTop p-0">
-                <div class="col-6 d-flex" style="justify-content: flex-start">
-                    <div class="dcWallet-btn-left" @click="$emit('send')">
-                        {{ translation.send }}
-                    </div>
-                </div>
-
-                <div class="col-6 d-flex" style="justify-content: flex-end">
-                    <div
-                        class="dcWallet-btn-right"
-                        @click="guiRenderCurrentReceiveModal()"
-                        data-toggle="modal"
-                        data-target="#qrModal"
+                    <span class="dcWallet-tlsBalance" v-html="balanceStr"> </span>
+                    <i
+                        class="fa-solid fa-plus"
+                        v-if="immatureBalance != 0"
+                        style="opacity: 0.5; position: relative; left: 2px"
+                    ></i>
+                    <span
+                        style="position: relative; left: 4px; font-size: 17px"
+                        v-if="immatureBalance != 0"
+                        v-html="immatureBalanceStr"
+                    ></span>
+                    <span
+                        class="dcWallet-tlsTicker"
+                        style="position: relative; left: 4px"
+                        >&nbsp;{{ ticker }}&nbsp;</span
                     >
-                        {{ translation.receive }}
+                </span>
+                <br />
+                <div class="dcWallet-usdBalance">
+                    <span class="dcWallet-usdValue">0.00</span>
+                    <span class="dcWallet-usdValue">&nbsp;{{ currency }}</span>
+                </div>
+
+                <div class="row lessTop p-0">
+                    <div class="col-6 d-flex" style="justify-content: flex-start">
+                        <div class="dcWallet-btn-left" @click="$emit('send')">
+                            {{ translation.send }}
+                        </div>
+                    </div>
+
+                    <div class="col-6 d-flex" style="justify-content: flex-end">
+                        <div
+                            class="dcWallet-btn-right"
+                            @click="guiRenderCurrentReceiveModal()"
+                            data-toggle="modal"
+                            data-target="#qrModal"
+                        >
+                            {{ translation.receive }}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <center>
-            <div
-                v-if="isSyncing"
-                style="
-                    background-color: #0000002b;
-                    width: fit-content;
-                    padding: 8px;
-                    border-radius: 15px;
-                "
-            >
-                {{ syncStr }}
-            </div>
+            <center>
+                <div
+                    v-if="isSyncing"
+                    style="
+                        background-color: #0000002b;
+                        width: fit-content;
+                        padding: 8px;
+                        border-radius: 15px;
+                    "
+                >
+                    {{ syncStr }}
+                </div>
+            </center>
         </center>
-    </center>
+        <SignMessageModal />
+    </div>
 </template>

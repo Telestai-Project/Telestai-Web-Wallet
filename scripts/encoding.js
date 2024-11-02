@@ -61,8 +61,10 @@ export function generateOrEncodePrivkey(pkBytesToEncode) {
     writeToUint8(keyWithChecksum, pkNetBytes, 0);
     writeToUint8(keyWithChecksum, checksum, 34);
 
+    const strWIF = bs58.encode(keyWithChecksum);
+
     // Return both the raw bytes and the WIF format
-    return { pkBytes, strWIF: bs58.encode(keyWithChecksum) };
+    return { pkBytes, strWIF };
 }
 
 /**

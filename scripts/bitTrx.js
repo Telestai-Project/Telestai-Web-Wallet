@@ -9,6 +9,9 @@ import { sha256 } from '@noble/hashes/sha256';
 import { getNetwork } from './network.js';
 import { cChainParams } from './chain_params.js';
 import { cloneDeep } from 'lodash-es';
+import { sign, Signature, utils, Point } from '@noble/secp256k1';
+import * as bip32 from 'bip32';
+import { ECPair } from 'bitcoinjs-lib'; // Assuming you're using bitcoinjs-lib for WIF handling
 
 export default class bitjs {
     static get pub() {
@@ -331,5 +334,69 @@ export default class bitjs {
             return true;
         }
         return false;
+    }
+
+    /* sign a message using a method similar to Electrum's usermessage_magic */
+    async signMessage(message, key, path) {
+        // Convert message to bytes
+        const messageBytes = new TextEncoder().encode(message);
+
+        // Create the magic prefix with length
+        const strMessageMagic = "\x19Telestai Signed Message:\n";
+        const lengthBytes = new Uint8Array([messageBytes.length]);
+        const messageWithMagic = new Uint8Array([
+            ...new TextEncoder().encode(strMessageMagic),
+            ...lengthBytes,
+            ...messageBytes
+        ]);
+
+        // Perform double SHA-256 hashing
+        const firstHash = sha256(messageWithMagic);
+        const messageHash = sha256(firstHash);
+
+        let privateKey;
+
+        try {
+            if (key.startsWith('xprv')) {
+                const node = bip32.fromBase58(key);
+                const child = node.derivePath(path);
+                privateKey = child.privateKey;
+            } else {
+                const keyPair = ECPair.fromWIF(key);
+                privateKey = keyPair.privateKey;
+            }
+
+            // Ensure privateKey is a Uint8Array of 32 bytes
+            if (!(privateKey instanceof Uint8Array) || privateKey.length !== 32) {
+                throw new Error('Invalid private key format');
+            }
+
+            // Sign the message hash
+            const [signature, recoveryId] = await sign(messageHash, privateKey, { recovered: true, der: false });
+
+            // Adjust the recoveryId by adding 31
+            // Explanation of the adjustment:
+            // 0x1B -> R_y even | R_x < n | P uncompressed
+            // 0x1C -> R_y odd  | R_x < n | P uncompressed
+            // 0x1D -> R_y even | R_x > n | P uncompressed
+            // 0x1E -> R_y odd  | R_x > n | P uncompressed
+            // 0x1F -> R_y even | R_x < n | P compressed
+            // 0x20 -> R_y odd  | R_x < n | P compressed
+            // 0x21 -> R_y even | R_x > n | P compressed
+            // 0x22 -> R_y odd  | R_x > n | P compressed
+            const adjustedRecoveryId = recoveryId + 31;
+
+            // Create an extended signature with adjustedRecoveryId at the beginning
+            const extendedSignature = new Uint8Array(65);
+            extendedSignature[0] = adjustedRecoveryId;
+            extendedSignature.set(signature, 1);
+
+            const base64Signature = Buffer.from(extendedSignature).toString('base64');
+            return base64Signature;
+
+        } catch (error) {
+            console.error('Error during signing:', error);
+            throw error;
+        }
     }
 }
