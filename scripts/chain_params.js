@@ -38,7 +38,8 @@ export const cChainParams = reactive({
         // A list of Labs-trusted explorers
         Explorers: [
             // Display name      Blockbook-compatible API base
-            { name: 'TLS BlockBook', url: 'https://blockbook.telestai.io' },
+            { name: 'TLS BlockBook 1', url: 'https://blockbook.telestai.io' },
+            { name: 'TLS BlockBook 2', url: 'https://blockbook2.telestai.io' },
         ],
         Nodes: [
 	    { name: 'TLS 1', url: 'https://dnsseed.telestainodes.xyz' },
@@ -73,7 +74,8 @@ export const cChainParams = reactive({
         // A list of Labs-trusted explorers
         Explorers: [
             // Display name      Blockbook-compatible API base
-            { name: 'TLS Blockbook', url: 'https://blockbook.telestai.io' },
+            { name: 'TLS Blockbook 1', url: 'https://blockbook.telestai.io' },
+            { name: 'TLS Blockbook 2', url: 'https://blockbook2.telestai.io' },
         ],
         Nodes: [
 	    { name: 'TLS TestNode1', url: 'seed1-testnet.telestai.io' },
