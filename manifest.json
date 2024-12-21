@@ -2,7 +2,7 @@
     "name": "My TLS Wallet",
     "short_name": "MPW",
     "start_url": ".",
-    "description": "Send, Stake and Receive with TLS's most universal wallet. ",
+    "description": "Send, Stake and Receive with TLS' most universal wallet. ",
     "orientation": "portrait",
     "display": "standalone",
     "icons": [
