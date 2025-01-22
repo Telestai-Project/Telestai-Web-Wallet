@@ -4,6 +4,7 @@ import pLogo from '../../assets/p_logo.svg';
 import { ref, watch, toRefs } from 'vue';
 import { translation } from '../i18n.js';
 import { isBase64 } from '../misc';
+import { scanQRCode } from '../scanner.js';
 
 const showInput = ref(false);
 const showPassword = ref(false);
@@ -59,6 +60,13 @@ function importWallet() {
     secret.value = '';
     password.value = '';
 }
+
+async function handleScanQRCode() {
+    const result = await scanQRCode();
+    if (result) {
+        secret.value = result.data;
+    }
+}
 </script>
 
 <template>
@@ -83,12 +91,17 @@ function importWallet() {
                 <!-- IMPORT WALLET -->
                 <input class="hide-element" type="text" id="clipboard" />
                 <div v-show="showInput">
-                    <input
-                        v-model="secret"
-                        :type="cloakSecret ? 'password' : 'text'"
-                        placeholder="Seed Phrase or Private Key"
-                        data-testid="secretInp"
-                    />
+                    <div style="display: flex; align-items: center;">
+                        <input
+                            v-model="secret"
+                            :type="cloakSecret ? 'password' : 'text'"
+                            placeholder="Seed Phrase or Private Key"
+                            data-testid="secretInp"
+                        />
+                        <button @click="handleScanQRCode" style="margin-left: 8px;">
+                            <i class="fas fa-qrcode"></i>
+                        </button>
+                    </div>
                     <input
                         v-show="showPassword"
                         v-model="password"
