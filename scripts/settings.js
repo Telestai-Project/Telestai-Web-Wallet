@@ -57,7 +57,8 @@ export let nDisplayDecimals = 2;
 /** A mode which configures MPW towards Advanced users, with low-level feature access and less restrictions (Potentially dangerous) */
 export let fAdvancedMode = false;
 /** automatically lock the wallet after any operation  that requires unlocking */
- export let fAutoLockWallet = false;
+export let fAutoLockWallet = false;
+
 let transparencyReport;
 
 export class Settings {
@@ -569,9 +570,6 @@ export async function toggleTestnet() {
     doms.domGuiBalanceStakingTicker.innerText = cChainParams.current.TICKER;
     // Update testnet toggle in settings
     doms.domTestnetToggler.checked = cChainParams.current.isTestnet;
-
-    await fillExplorerSelect();
-    await fillNodeSelect();
     await start();
 
     stakingDashboard.reset();
