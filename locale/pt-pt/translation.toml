@@ -77,6 +77,8 @@ syncStatusStarting = "<b>Sua carteira está sincronizando!</b><br>Você poderá 
 syncStatusFinished = "<b>Sincronização concluída!</b><br>Sua carteira está pronta para uso!" # <b>Sync Finished!</b><br>Your wallet is ready to use!
 accountDeleted = "Sua conta foi excluída com sucesso!" # Your account has been successfully deleted!
 chartImmatureBalance = "" # Immature balance
+syncLoadingSaplingProver = "" # Loading Sapling Prover
+settingsToggleAutoLockWallet = "" # Auto Lock the Wallet
 
 [ALERTS]
 STAKE_ADDR_SET = "<b>Endereço de Cold Staking definido!</b><br>Ao fazer Stake no futuro irá ser usado este endereço." # <b>Cold Address set!</b><br>Future stakes will use this address.

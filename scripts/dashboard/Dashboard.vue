@@ -57,7 +57,7 @@ const needsToEncrypt = computed(() => {
     }
 });
 const showTransferMenu = ref(false);
-const { advancedMode, displayDecimals } = useSettings();
+const { advancedMode, displayDecimals, autoLockWallet } = useSettings();
 const showExportModal = ref(false);
 const showEncryptModal = ref(false);
 const keyToBackup = ref('');
@@ -242,9 +242,9 @@ async function restoreWallet(strReason) {
 }
 
 /**
- * Lock the wallet by deleting masterkey private data
+ * Lock the wallet by deleting masterkey private data, after user confirmation
  */
-async function lockWallet() {
+async function displayLockWalletModal() {
     const isEncrypted = wallet.isEncrypted.value;
     const title = isEncrypted
         ? translation.popupWalletLock
@@ -258,10 +258,18 @@ async function lockWallet() {
             html,
         })
     ) {
-        wallet.wipePrivateData();
-        createAlert('success', ALERTS.WALLET_LOCKED, 1500);
+        lockWallet();
     }
 }
+
+/**
+  * Lock the wallet by deleting masterkey private data
+  */
+function lockWallet() {
+    wallet.wipePrivateData();
+    createAlert('success', ALERTS.WALLET_LOCKED, 1500);
+}
+ 
 
 /**
  * Sends a transaction
@@ -344,13 +352,33 @@ async function send(address, amount) {
     showTransferMenu.value = false;
     transferAddress.value = '';
     transferAmount.value = '';
-
-    // Create and send the TX
-    await createAndSendTransaction({
-        address,
-        amount: nValue,
-        isDelegation: false,
-    });
+    try {
+        // Create and send the TX
+        await createAndSendTransaction({
+            address,
+            amount: nValue,
+            isDelegation: false,
+         });
+     } catch (e) {
+         console.error(e);
+         createAlert('warning', e);
+     } finally {
+         if (autoLockWallet.value) {
+             if (wallet.isEncrypted.value) {
+                 lockWallet();
+             } else {
+                 await displayLockWalletModal();
+             }
+         }
+     }
+ }
+ 
+ /**
+  * Gets the maximum balance available in the wallet.
+  */
+ function getMaxBalance() {
+     const coinSatoshi = wallet.balance.value;
+     transferAmount.value = (coinSatoshi / COIN).toString();
 }
 
 getEventEmitter().on('toggle-network', async () => {
@@ -518,7 +546,10 @@ defineExpose({
                 "
             >
                 <center>
-                    <div class="dcWallet-warningMessage" @click="lockWallet()">
+                    <div
+                         class="dcWallet-warningMessage"
+                         @click="displayLockWalletModal()"
+                     >
                         <div class="shieldLogo">
                             <div class="shieldBackground">
                                 <span

@@ -210,6 +210,8 @@ contestedProposalsTitle = "" # Contested Proposals
 accountDeleted = "" # Your account has been successfully deleted!
 activityReceivedWith = "" # Received with {s}
 chartImmatureBalance = "" # Immature balance
+syncLoadingSaplingProver = "" # Loading Sapling Prover
+settingsToggleAutoLockWallet = "" # Auto Lock the Wallet
 
 [ALERTS]
 INTERNAL_ERROR = "Error interno, vuelve a intentarlo más tarde" # Internal error, please try again later
