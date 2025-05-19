@@ -3,17 +3,9 @@ import { isEmpty } from './misc.js';
 import { cMarket, fillCurrencySelect } from './settings.js';
 
 /**
- * CoinGecko's endpoint for TLS data, optimised for least bandwidth
- * - No localisation, tickers, community data, developer data or sparklines
- */
-export const COINGECKO_ENDPOINT =
-    'https://api.coingecko.com/api/v3/coins/ai-power-grid?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false';
-
-/**
  * Xeggex's endpoint for TLS data
  */
 export const XEGGEX_ENDPOINT = 'https://api.xeggex.com/api/v2/market/getbysymbol/tls_usdt';
-
 
 /**
  * The generic market data source template, used to build site-specific classes
@@ -43,42 +35,10 @@ export class MarketSource {
         try {
             return (this.cData = await (await fetch(this.strEndpoint)).json());
         } catch (e) {
-            console.warn('CoinGecko: Failed to fetch prices!');
+            console.warn('Xeggex: Failed to fetch prices!');
             console.warn(e);
             return null;
         }
-    }
-}
-
-/**
- * The CoinGecko market data source
- */
-export class CoinGecko extends MarketSource {
-    constructor() {
-        super();
-        this.strName = 'CoinGecko';
-        this.strEndpoint = COINGECKO_ENDPOINT;
-    }
-
-    /**
-     * Get the price in a specific display currency
-     * @param {string} strCurrency - The CoinGecko-supported display currency
-     * @return {Promise<number>}
-     */
-    async getPrice(strCurrency) {
-        await this.ensureCacheExists();
-        return this.cData?.market_data?.current_price[strCurrency] || 0;
-    }
-
-    /**
-     * Get a list of the supported display currencies
-     * @returns {Promise<Array<string>>} - A list of CoinGecko-supported display currencies
-     */
-    async getCurrencies() {
-        await this.ensureCacheExists();
-        return !isEmpty(this.cData)
-            ? Object.keys(this.cData.market_data.current_price)
-            : [];
     }
 }
 

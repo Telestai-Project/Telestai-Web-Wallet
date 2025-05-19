@@ -20,7 +20,7 @@ import {
     arrActiveLangs,
     tr,
 } from './i18n.js';
-import { CoinGecko, Xeggex, refreshPriceDisplay } from './prices.js';
+import { Xeggex, refreshPriceDisplay } from './prices.js';
 import { Database } from './database.js';
 import { getEventEmitter } from './event_bus.js';
 import { getCurrencyByAlpha2 } from 'country-locale-map';
